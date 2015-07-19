@@ -35,7 +35,13 @@ simulator {
 }
 
 config_pri_assets {
-    OTHER_FILES += $$quote($$BASEDIR/assets/main.qml)
+    OTHER_FILES += \
+        $$quote($$BASEDIR/assets/about.qml) \
+        $$quote($$BASEDIR/assets/favoritesList.qml) \
+        $$quote($$BASEDIR/assets/hymnView.qml) \
+        $$quote($$BASEDIR/assets/hymnsList.qml) \
+        $$quote($$BASEDIR/assets/main.qml) \
+        $$quote($$BASEDIR/assets/settings.qml)
 }
 
 config_pri_source_group1 {

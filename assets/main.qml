@@ -16,7 +16,65 @@
 
 import bb.cascades 1.4
 
-
 TabbedPane {
+    id: tappedPane
+    showTabsOnActionBar: false
     
+    Menu.definition: MenuDefinition {
+        helpAction: HelpActionItem {
+            title: "About"
+        }
+        
+        settingsAction: SettingsActionItem {}
+        
+        actions: [
+            ActionItem {
+                title: qsTr("Feedback") + Retranslate.onLocaleOrLanguageChanged
+                ActionBar.placement: ActionBarPlacement.OnBar
+            }
+        ]
+    }
+    
+    Tab {
+        id: hymnsList
+        title: qsTr("MCCHymns") + Retranslate.onLocaleOrLanguageChanged
+        delegate: Delegate {
+            id: hymnsDelegate
+            source: "hymnsList.qml"
+        }
+        delegateActivationPolicy: TabDelegateActivationPolicy.Default
+    }
+    
+    Tab {
+        id: favoritesList
+        title: qsTr("Favorites") + Retranslate.onLocaleOrLanguageChanged
+        
+        delegate: Delegate {
+            id: favoritesDelegate
+            source: "favoritesList.qml"
+        }
+        delegateActivationPolicy: TabDelegateActivationPolicy.Default
+    }
+    
+    Tab {
+        id: settings
+        title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
+        
+        delegate: Delegate {
+            id: settingsDelegate
+            source: "settings.qml"
+        }
+        delegateActivationPolicy: TabDelegateActivationPolicy.Default
+    }
+    
+    Tab {
+        id: about
+        title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
+        
+        delegate: Delegate {
+            id: aboutDelegate
+            source: "about.qml"
+        }
+        delegateActivationPolicy: TabDelegateActivationPolicy.Default
+    }
 }
