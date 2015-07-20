@@ -7,6 +7,14 @@ Page {
         appearance: TitleBarAppearance.Branded
     }
     
+    actions: [
+        ActionItem {
+            title: qsTr("Goto Hymn") + Retranslate.onLocaleOrLanguageChanged
+            ActionBar.placement: ActionBarPlacement.Signature
+            imageSource: "asset:///images/ic_action_goto_hymn.png"
+        }
+    ]
+    
     Container {
         
     }

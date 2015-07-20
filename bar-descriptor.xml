@@ -63,12 +63,15 @@
 
     <!-- Description, displayed in the BlackBerry 10 application installer.
          May have multiple values for each language. See samples or xsd schema file. Optional. -->
-    <description>The MCCHymns application</description>
+    <description>Sacred songs and solos hymns for BlackBerry</description>
 
     <!-- Copyright information. Optional. -->
     <!-- <copyright></copyright> -->
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
+    <icon>
+       <image>icon.png</image>
+    </icon>
     <author>Example Inc.</author>
 
     <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
@@ -80,11 +83,6 @@
     </initialWindow>
 
     <!--  The icon for the application, which should be 114x114. -->
-    <icon>
-        <image>icon.png</image>
-    </icon>
-
-    <asset path="icon.png">icon.png</asset>
     <asset path="assets">assets</asset>
 
     <!-- Locale support -->
@@ -95,5 +93,6 @@
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
     <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+    <env var="CASCADES_THEME" value="bright?primaryColor=0xC9004A&amp;primaryBase=0xC2185B"/>
 
 </qnx>

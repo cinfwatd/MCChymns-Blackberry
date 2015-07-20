@@ -23,16 +23,19 @@ NavigationPane {
             ActionItem {
                 title: qsTr("Goto Hymn") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.OnBar
+                imageSource: "asset:///images/ic_action_goto_hymn.png"
             },
             
             ActionItem {
                 title: qsTr("Search") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.Signature
+                imageSource: "asset:///images/ic_search.png"
             },
             
             ActionItem {
                 title: qsTr("Sort By") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.OnBar
+                imageSource: "asset:///images/ic_sort.png"
             }
         ]
     }

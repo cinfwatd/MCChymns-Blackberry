@@ -23,14 +23,18 @@ TabbedPane {
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             title: "About"
+            imageSource: "asset:///images/ic_action_bulb.png"
         }
         
-        settingsAction: SettingsActionItem {}
+        settingsAction: SettingsActionItem {
+            imageSource: "asset:///images/ic_action_sliders.png"
+        }
         
         actions: [
             ActionItem {
                 title: qsTr("Feedback") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.OnBar
+                imageSource: "asset:///images/ic_feedback.png"
             }
         ]
     }
@@ -38,6 +42,8 @@ TabbedPane {
     Tab {
         id: hymnsList
         title: qsTr("MCCHymns") + Retranslate.onLocaleOrLanguageChanged
+        imageSource: "asset:///images/ic_action_queue_music.png"
+        
         delegate: Delegate {
             id: hymnsDelegate
             source: "hymnsList.qml"
@@ -48,6 +54,7 @@ TabbedPane {
     Tab {
         id: favoritesList
         title: qsTr("Favorites") + Retranslate.onLocaleOrLanguageChanged
+        imageSource: "asset:///images/ic_action_badge.png"
         
         delegate: Delegate {
             id: favoritesDelegate
@@ -59,6 +66,7 @@ TabbedPane {
     Tab {
         id: settings
         title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
+        imageSource: "asset:///images/ic_action_sliders.png"
         
         delegate: Delegate {
             id: settingsDelegate
@@ -70,11 +78,16 @@ TabbedPane {
     Tab {
         id: about
         title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
+        imageSource: "asset:///images/ic_action_bulb.png"
         
         delegate: Delegate {
             id: aboutDelegate
             source: "about.qml"
         }
         delegateActivationPolicy: TabDelegateActivationPolicy.Default
+    }
+    
+    onActiveTabChanged: {
+        
     }
 }
