@@ -37,6 +37,7 @@ simulator {
 config_pri_assets {
     OTHER_FILES += \
         $$quote($$BASEDIR/assets/GotoHymnDialog.qml) \
+        $$quote($$BASEDIR/assets/Stanza.qml) \
         $$quote($$BASEDIR/assets/about.qml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
         $$quote($$BASEDIR/assets/hymnView.qml) \

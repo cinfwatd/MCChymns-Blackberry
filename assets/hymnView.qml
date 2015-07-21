@@ -41,10 +41,10 @@ Page {
     Container {
         id: hymnContainer
         layout: DockLayout {}
-        topPadding: 30
-        rightPadding: 30
-        bottomPadding: 30
-        leftPadding: 30
+        topPadding: ui.du(1)
+        rightPadding: ui.du(3)
+        bottomPadding: ui.du(3)
+        leftPadding: ui.du(3)
         
         Container {
             id: stanzasContainer
@@ -52,6 +52,16 @@ Page {
                 orientation: LayoutOrientation.TopToBottom
             }
             verticalAlignment: VerticalAlignment.Top
+            
+            Stanza {
+                stanzaNumber: "1"
+                stanza: "Jesus is good."
+            }
+            
+            Stanza {
+                stanzaNumber: "2"
+                stanza: "I love the Lord. He rescues me."
+            }
         }
         
         Container {
@@ -73,12 +83,12 @@ Page {
                 textStyle.color: fontStyle.color
                 textStyle.base: SystemDefaults.TextStyles.BodyText
                 horizontalAlignment: HorizontalAlignment.Center
-                topMargin: 10
+                topMargin: ui.du(1)
             }
             
             Divider {
-                topMargin: 10
-                bottomMargin: 10
+                topMargin: ui.du(1)
+                bottomMargin: ui.du(duValue)
             }
             
             ScrollView {

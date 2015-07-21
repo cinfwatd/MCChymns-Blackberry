@@ -1,5 +1,5 @@
 1
-25
+26
 favoritesList.qml
 hymnView.qml
 images/ic_feedback.png
@@ -20,6 +20,7 @@ images/ic_action_badge.png
 images/ic_delete.png
 images/ic_show_dialpad.png
 about.qml
+stanza.qml
 main.qml
 hymnsList.qml
 GotoHymnDialog.qml
