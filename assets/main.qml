@@ -20,6 +20,12 @@ TabbedPane {
     id: tappedPane
     showTabsOnActionBar: false
     
+    attachedObjects: [
+        GotoHymnDialog {
+            id: gotoHymnDialog
+        }
+    ]
+    
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             title: "About"

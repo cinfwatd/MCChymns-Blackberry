@@ -24,6 +24,10 @@ NavigationPane {
                 title: qsTr("Goto Hymn") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.OnBar
                 imageSource: "asset:///images/ic_action_goto_hymn.png"
+                
+                onTriggered: {
+                    gotoHymnDialog.open()
+                }
             },
             
             ActionItem {

@@ -36,12 +36,14 @@ simulator {
 
 config_pri_assets {
     OTHER_FILES += \
+        $$quote($$BASEDIR/assets/GotoHymnDialog.qml) \
         $$quote($$BASEDIR/assets/about.qml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
         $$quote($$BASEDIR/assets/hymnView.qml) \
         $$quote($$BASEDIR/assets/hymnsList.qml) \
         $$quote($$BASEDIR/assets/images/ic_action_badge.png) \
         $$quote($$BASEDIR/assets/images/ic_action_bulb.png) \
+        $$quote($$BASEDIR/assets/images/ic_action_clear.png) \
         $$quote($$BASEDIR/assets/images/ic_action_favorite_off.png) \
         $$quote($$BASEDIR/assets/images/ic_action_favorite_on.png) \
         $$quote($$BASEDIR/assets/images/ic_action_goto_hymn.png) \
