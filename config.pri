@@ -65,10 +65,13 @@ config_pri_assets {
 
 config_pri_source_group1 {
     SOURCES += \
+        $$quote($$BASEDIR/src/AppSettings.cpp) \
         $$quote($$BASEDIR/src/applicationui.cpp) \
         $$quote($$BASEDIR/src/main.cpp)
 
-    HEADERS += $$quote($$BASEDIR/src/applicationui.hpp)
+    HEADERS += \
+        $$quote($$BASEDIR/src/AppSettings.hpp) \
+        $$quote($$BASEDIR/src/applicationui.hpp)
 }
 
 CONFIG += precompile_header
