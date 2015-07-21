@@ -4,38 +4,38 @@
 <context>
     <name>about</name>
     <message>
-        <location filename="../assets/about.qml" line="5"/>
+        <location filename="../assets/about.qml" line="6"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="13"/>
+        <location filename="../assets/about.qml" line="14"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="57"/>
+        <location filename="../assets/about.qml" line="59"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="66"/>
+        <location filename="../assets/about.qml" line="69"/>
         <source>Sacred songs and solos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="77"/>
+        <location filename="../assets/about.qml" line="81"/>
         <source>Twelve hundred hymns
 as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="86"/>
+        <location filename="../assets/about.qml" line="91"/>
         <source>IRA D. SANKEY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="110"/>
+        <location filename="../assets/about.qml" line="116"/>
         <source>Bitrient Inc.    2015</source>
         <translation type="unfinished"></translation>
     </message>

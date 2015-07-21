@@ -57,7 +57,8 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/images/ic_sort.png) \
         $$quote($$BASEDIR/assets/images/icon.png) \
         $$quote($$BASEDIR/assets/main.qml) \
-        $$quote($$BASEDIR/assets/settings.qml)
+        $$quote($$BASEDIR/assets/settings.qml) \
+        $$quote($$BASEDIR/assets/sql/MCCHymns.db)
 }
 
 config_pri_source_group1 {
@@ -84,7 +85,10 @@ lupdate_inclusion {
         $$quote($$BASEDIR/../assets/*.qs) \
         $$quote($$BASEDIR/../assets/images/*.qml) \
         $$quote($$BASEDIR/../assets/images/*.js) \
-        $$quote($$BASEDIR/../assets/images/*.qs)
+        $$quote($$BASEDIR/../assets/images/*.qs) \
+        $$quote($$BASEDIR/../assets/sql/*.qml) \
+        $$quote($$BASEDIR/../assets/sql/*.js) \
+        $$quote($$BASEDIR/../assets/sql/*.qs)
 
     HEADERS += \
         $$quote($$BASEDIR/../src/*.h) \

@@ -1,5 +1,5 @@
 1
-22
+23
 favoritesList.qml
 hymnView.qml
 images/ic_feedback.png
@@ -21,4 +21,5 @@ images/ic_show_dialpad.png
 about.qml
 main.qml
 hymnsList.qml
+sql/MCCHymns.db
 settings.qml

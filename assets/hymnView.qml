@@ -58,6 +58,10 @@ Page {
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
             preferredWidth: maxWidth
+            
+            Divider {
+                bottomMargin: 0
+            }
 
             Label {
                 id: chorusTitle
@@ -65,17 +69,26 @@ Page {
                 textStyle.color: fontStyle.color
                 textStyle.base: SystemDefaults.TextStyles.BodyText
                 horizontalAlignment: HorizontalAlignment.Center
+                topMargin: 10
             }
             
-            Label {
-                id: chorus
-                textFormat: TextFormat.Auto
-                multiline: true
-                textStyle.textAlign: TextAlign.Center
-                textStyle.color: fontStyle.color
-                textStyle.base: SystemDefaults.TextStyles.BodyText
-                text: "Jesus my savior to bethlehem came\nBorn in a manger to sorrow and shame\nOh it was wonderfull blessed be His name."
+            Divider {
+                topMargin: 10
+                bottomMargin: 10
+            }
+            
+            ScrollView {
                 horizontalAlignment: HorizontalAlignment.Center
+                Label {
+                    id: chorus
+                    textFormat: TextFormat.Auto
+                    multiline: true
+                    textStyle.textAlign: TextAlign.Center
+                    textStyle.color: fontStyle.color
+                    textStyle.base: SystemDefaults.TextStyles.BodyText
+                    text: "Jesus my savior to bethlehem came\nBorn in a manger to sorrow and shame\nOh it was wonderfull blessed be His name."
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
             }
         }
     }

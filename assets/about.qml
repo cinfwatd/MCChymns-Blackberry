@@ -1,6 +1,7 @@
 import bb.cascades 1.4
 
 Page {
+    id: about
     titleBar: TitleBar {
         title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
         kind: TitleBarKind.Default
@@ -22,7 +23,7 @@ Page {
         Container {
             id: header
             layout: DockLayout {}
-            preferredWidth: maxWidth
+            horizontalAlignment: HorizontalAlignment.Fill
             topPadding: 20
             rightPadding: 20
             bottomPadding: 20
@@ -45,30 +46,30 @@ Page {
             id: main
             layout: DockLayout {}
             background: Color.create("#C9004A")
-            preferredWidth: maxWidth
-            preferredHeight: maxHeight
+            preferredWidth: Infinity
+            preferredHeight: Infinity
             
             Container {
-                horizontalAlignment: HorizontalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Fill
                 verticalAlignment: VerticalAlignment.Center
                 
                 Label {
                     id: mcchymns
                     text: qsTr("MCCHymns") + Retranslate.onLocaleOrLanguageChanged
                     textStyle.base: SystemDefaults.TextStyles.BigText
-                    preferredWidth: maxWidth
                     textStyle.textAlign: TextAlign.Center
                     textStyle.color: Color.White
                     bottomMargin: 0
+                    horizontalAlignment: HorizontalAlignment.Center
                 }
                 Label {
                     id: ssands
                     text: qsTr("Sacred songs and solos") + Retranslate.onLocaleOrLanguageChanged
                     textStyle.base: SystemDefaults.TextStyles.TitleText
                     textStyle.color: Color.create("#DCDCDC")
-                    preferredWidth: maxWidth
                     textStyle.textAlign: TextAlign.Center
                     topMargin: 0
+                    horizontalAlignment: HorizontalAlignment.Center
                 }
                 Label {
                     id: twelveHundredHymns
@@ -77,18 +78,18 @@ Page {
                     text: qsTr("Twelve hundred hymns\nas compiled under the direction of") + Retranslate.onLocaleOrLanguageChanged
                     textStyle.base: SystemDefaults.TextStyles.BodyText
                     textStyle.color: Color.create("#C0C0C0")
-                    preferredWidth: maxWidth
                     textStyle.textAlign: TextAlign.Center
                     bottomMargin: 0
+                    horizontalAlignment: HorizontalAlignment.Center
                 }
                 Label {
                     id: iraDsankey
                     text: qsTr("IRA D. SANKEY") + Retranslate.onLocaleOrLanguageChanged
                     textStyle.base: SystemDefaults.TextStyles.TitleText
                     textStyle.color: Color.create("#DCDCDC")
-                    preferredWidth: maxWidth
                     textStyle.textAlign: TextAlign.Center
                     topMargin: 0
+                    horizontalAlignment: HorizontalAlignment.Center
                 }
             }
             
@@ -99,7 +100,6 @@ Page {
             layout: StackLayout {
                 orientation: LayoutOrientation.LeftToRight
             }
-            preferredWidth: maxWidth
             topPadding: 20
             rightPadding: 20
             bottomPadding: 20
