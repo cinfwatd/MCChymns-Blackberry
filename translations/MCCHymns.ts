@@ -91,7 +91,7 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="72"/>
+        <location filename="../assets/hymnView.qml" line="82"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>

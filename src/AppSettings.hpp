@@ -15,7 +15,7 @@
 /*
  * Handles application wide settings
  */
-class AppSettings
+class AppSettings : public QObject
 {
     Q_OBJECT
 
@@ -72,7 +72,7 @@ private:
 
 //    The property variables.
     bool mStartFavorites;
-    Qstring mFont;
+    QString mFont;
     int mFontSize;
     int mFontColor;
     int mBackgroundColor;

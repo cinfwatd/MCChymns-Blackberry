@@ -19,8 +19,8 @@ images/ic_action_goto_hymn.png
 images/ic_action_badge.png
 images/ic_delete.png
 images/ic_show_dialpad.png
+Stanza.qml
 about.qml
-stanza.qml
 main.qml
 hymnsList.qml
 GotoHymnDialog.qml

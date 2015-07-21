@@ -21,6 +21,8 @@
 #include <bb/cascades/AbstractPane>
 #include <bb/cascades/LocaleHandler>
 
+#include "AppSettings.hpp"
+
 using namespace bb::cascades;
 
 ApplicationUI::ApplicationUI() :
@@ -46,6 +48,7 @@ ApplicationUI::ApplicationUI() :
 
 //    Make the application settings object available to QML, all application wide
 //    settings are managed via properties in this object.
+//    qml->setContextProperty("appSettings", new AppSettings(this));
     qml->setContextProperty("appSettings", new AppSettings(this));
 
     // Create root object for the UI
