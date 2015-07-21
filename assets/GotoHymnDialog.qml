@@ -32,13 +32,20 @@ Dialog {
         
         layout: DockLayout {}
         
+        onTouch: {
+            console.log("On touch")
+        }
+        
         Container {
-            maxHeight: ui.du(49.7)
-            maxWidth: ui.du(60)
-            leftPadding: ui.du(3)
+            maxHeight: ui.du(59.7)
+            maxWidth: ui.du(59.7)
+            leftPadding: ui.du(6)
             rightPadding: leftPadding
+            topPadding: ui.du(3)
+            bottomPadding: topPadding
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
+            background: Color.White
             
             Container {
                 layout: StackLayout {
