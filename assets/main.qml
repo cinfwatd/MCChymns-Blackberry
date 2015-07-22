@@ -141,7 +141,9 @@ TabbedPane {
         delegateActivationPolicy: TabDelegateActivationPolicy.Default
     }
     
-    onActiveTabChanged: {
-        
+    onCreationCompleted: {
+        if (appSettings.startFavorites) {
+            activeTab = favoritesList
+        }
     }
 }
