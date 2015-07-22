@@ -23,6 +23,40 @@ TabbedPane {
     attachedObjects: [
         GotoHymnDialog {
             id: gotoHymnDialog
+        },
+        
+        Sheet {
+            id: settingsSheet
+            content: Settings {
+                titleBar: TitleBar {
+                    title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
+                    kind: TitleBarKind.Default
+                    appearance: TitleBarAppearance.Branded
+                    dismissAction: ActionItem {
+                        title: "CLOSE"
+                        onTriggered: {
+                            settingsSheet.close()
+                        }
+                    }
+                }
+            }
+        },
+        
+        Sheet {
+            id: aboutSheet
+            content: About {
+                titleBar: TitleBar {
+                    title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
+                    kind: TitleBarKind.Default
+                    appearance: TitleBarAppearance.Branded
+                    dismissAction: ActionItem {
+                        title: "CLOSE"
+                        onTriggered: {
+                            aboutSheet.close()
+                        }
+                    }
+                }
+            }
         }
     ]
     
@@ -30,10 +64,24 @@ TabbedPane {
         helpAction: HelpActionItem {
             title: "About"
             imageSource: "asset:///images/ic_action_bulb.png"
+            onTriggered: {
+                if (tappedPane.activePane == 0) {
+                    aboutSheet.open()
+                } else {
+                    tappedPane.activeTab = about
+                }
+            }
         }
         
         settingsAction: SettingsActionItem {
             imageSource: "asset:///images/ic_action_sliders.png"
+            onTriggered: {
+                if (tappedPane.activePane == 0) {
+                    settingsSheet.open()
+                } else {
+                    tappedPane.activeTab = settings
+                }
+            }
         }
         
         actions: [
@@ -76,7 +124,7 @@ TabbedPane {
         
         delegate: Delegate {
             id: settingsDelegate
-            source: "settings.qml"
+            source: "Settings.qml"
         }
         delegateActivationPolicy: TabDelegateActivationPolicy.Default
     }
@@ -88,7 +136,7 @@ TabbedPane {
         
         delegate: Delegate {
             id: aboutDelegate
-            source: "about.qml"
+            source: "About.qml"
         }
         delegateActivationPolicy: TabDelegateActivationPolicy.Default
     }
