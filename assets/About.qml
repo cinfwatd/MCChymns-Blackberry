@@ -10,16 +10,15 @@ Page {
     }
     
     Container {
-//        layout: DockLayout {}
         
         Container {
             id: header
             layout: DockLayout {}
             horizontalAlignment: HorizontalAlignment.Fill
-            topPadding: 20
-            rightPadding: 20
-            bottomPadding: 20
-            leftPadding: 20
+            topPadding: ui.du(2)
+            rightPadding: topPadding
+            bottomPadding: topPadding
+            leftPadding: topPadding
             
             ImageView {
                 horizontalAlignment: HorizontalAlignment.Left
@@ -92,10 +91,10 @@ Page {
             layout: StackLayout {
                 orientation: LayoutOrientation.LeftToRight
             }
-            topPadding: 20
-            rightPadding: 20
-            bottomPadding: 20
-            leftPadding: 20
+            topPadding: ui.du(2)
+            rightPadding: topPadding
+            bottomPadding: topPadding
+            leftPadding: topPadding
             
             Label {
                 id: developer
@@ -105,7 +104,7 @@ Page {
                     spaceQuota: 1
                 }
                 textStyle.textAlign: TextAlign.Right
-                rightMargin: 150
+                rightMargin: ui.du(10)
             }
             
             Label {
