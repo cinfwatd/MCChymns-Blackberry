@@ -2,41 +2,69 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
-    <name>about</name>
+    <name>About</name>
     <message>
-        <location filename="../assets/about.qml" line="6"/>
+        <location filename="../assets/About.qml" line="6"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="14"/>
-        <source>Goto Hymn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/about.qml" line="62"/>
+        <location filename="../assets/About.qml" line="62"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="71"/>
+        <location filename="../assets/About.qml" line="71"/>
         <source>Sacred songs and solos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="82"/>
+        <location filename="../assets/About.qml" line="82"/>
         <source>Twelve hundred hymns
 as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="91"/>
+        <location filename="../assets/About.qml" line="91"/>
         <source>IRA D. SANKEY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="114"/>
+        <location filename="../assets/About.qml" line="114"/>
         <source>Bitrient Inc.    2015</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../assets/Settings.qml" line="35"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/Settings.qml" line="70"/>
+        <source>Favorites</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/Settings.qml" line="75"/>
+        <source>Show favorites on start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/Settings.qml" line="93"/>
+        <source>Hymn settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/Settings.qml" line="183"/>
+        <source>Background Texture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/Settings.qml" line="188"/>
+        <source>Use textured background</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -127,41 +155,30 @@ as compiled under the direction of</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="41"/>
+        <location filename="../assets/main.qml" line="89"/>
         <source>Feedback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="50"/>
+        <location filename="../assets/main.qml" line="98"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="62"/>
+        <location filename="../assets/main.qml" line="110"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="74"/>
+        <location filename="../assets/main.qml" line="32"/>
+        <location filename="../assets/main.qml" line="122"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="86"/>
+        <location filename="../assets/main.qml" line="49"/>
+        <location filename="../assets/main.qml" line="134"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>settings</name>
-    <message>
-        <location filename="../assets/settings.qml" line="5"/>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/settings.qml" line="12"/>
-        <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

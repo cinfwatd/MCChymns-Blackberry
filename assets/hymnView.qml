@@ -88,7 +88,7 @@ Page {
             
             Divider {
                 topMargin: ui.du(1)
-                bottomMargin: ui.du(duValue)
+                bottomMargin: ui.du(1)
             }
             
             ScrollView {

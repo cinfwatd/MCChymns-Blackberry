@@ -1,6 +1,7 @@
 1
 26
 favoritesList.qml
+Settings.qml
 hymnView.qml
 images/ic_feedback.png
 images/ic_action_clear.png
@@ -20,9 +21,8 @@ images/ic_action_badge.png
 images/ic_delete.png
 images/ic_show_dialpad.png
 Stanza.qml
-about.qml
+About.qml
 main.qml
 hymnsList.qml
 GotoHymnDialog.qml
 sql/MCCHymns.db
-settings.qml

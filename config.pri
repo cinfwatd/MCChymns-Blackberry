@@ -36,9 +36,10 @@ simulator {
 
 config_pri_assets {
     OTHER_FILES += \
+        $$quote($$BASEDIR/assets/About.qml) \
         $$quote($$BASEDIR/assets/GotoHymnDialog.qml) \
+        $$quote($$BASEDIR/assets/Settings.qml) \
         $$quote($$BASEDIR/assets/Stanza.qml) \
-        $$quote($$BASEDIR/assets/about.qml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
         $$quote($$BASEDIR/assets/hymnView.qml) \
         $$quote($$BASEDIR/assets/hymnsList.qml) \
@@ -60,7 +61,6 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/images/ic_sort.png) \
         $$quote($$BASEDIR/assets/images/icon.png) \
         $$quote($$BASEDIR/assets/main.qml) \
-        $$quote($$BASEDIR/assets/settings.qml) \
         $$quote($$BASEDIR/assets/sql/MCCHymns.db)
 }
 
