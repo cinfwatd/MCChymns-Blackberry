@@ -114,12 +114,7 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="35"/>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/hymnView.qml" line="82"/>
+        <location filename="../assets/hymnView.qml" line="86"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>
@@ -137,17 +132,17 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="24"/>
+        <location filename="../assets/hymnsList.qml" line="36"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="34"/>
+        <location filename="../assets/hymnsList.qml" line="46"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="40"/>
+        <location filename="../assets/hymnsList.qml" line="52"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>
@@ -155,29 +150,29 @@ as compiled under the direction of</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="89"/>
+        <location filename="../assets/main.qml" line="85"/>
         <source>Feedback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="98"/>
+        <location filename="../assets/main.qml" line="94"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="110"/>
+        <location filename="../assets/main.qml" line="106"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="32"/>
-        <location filename="../assets/main.qml" line="122"/>
+        <location filename="../assets/main.qml" line="118"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="49"/>
-        <location filename="../assets/main.qml" line="134"/>
+        <location filename="../assets/main.qml" line="130"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>

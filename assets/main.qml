@@ -65,10 +65,8 @@ TabbedPane {
             title: "About"
             imageSource: "asset:///images/ic_action_bulb.png"
             onTriggered: {
-                if (tappedPane.activePane == 0) {
+                if (tappedPane.activePane != about) {
                     aboutSheet.open()
-                } else {
-                    tappedPane.activeTab = about
                 }
             }
         }
@@ -76,10 +74,8 @@ TabbedPane {
         settingsAction: SettingsActionItem {
             imageSource: "asset:///images/ic_action_sliders.png"
             onTriggered: {
-                if (tappedPane.activePane == 0) {
+                if (tappedPane.activeTab != settings) {
                     settingsSheet.open()
-                } else {
-                    tappedPane.activeTab = settings
                 }
             }
         }

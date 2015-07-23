@@ -15,7 +15,19 @@ NavigationPane {
             ListView {
                 id: hymnsList
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
+                dataModel: XmlDataModel {
+                    source: "data.xml"
+                }
                 
+                onTriggered: {
+                    if (indexPath.length > 1) {
+                        var chosenItem = dataModel.data(indexPath)
+                        var contentPage = hymnViewDefinition.createObject()
+                        
+//                        contentPage.itemPageTitle = chosenItem.name
+                        navigationPane.push(contentPage)
+                    }
+                }
             }
         }
         
@@ -42,5 +54,15 @@ NavigationPane {
                 imageSource: "asset:///images/ic_sort.png"
             }
         ]
+    }
+    
+    attachedObjects: [
+        ComponentDefinition {
+            id: hymnViewDefinition
+            source: "hymnView.qml"
+        }
+    ]
+    onPopTransitionEnded: {
+        page.destroy()
     }
 }

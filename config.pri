@@ -40,6 +40,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/GotoHymnDialog.qml) \
         $$quote($$BASEDIR/assets/Settings.qml) \
         $$quote($$BASEDIR/assets/Stanza.qml) \
+        $$quote($$BASEDIR/assets/data.xml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
         $$quote($$BASEDIR/assets/hymnView.qml) \
         $$quote($$BASEDIR/assets/hymnsList.qml) \

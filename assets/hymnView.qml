@@ -29,12 +29,6 @@ Page {
             title: qsTr(" Add to Favorites") + Retranslate.onLocaleOrLanguageChanged
             ActionBar.placement: ActionBarPlacement.Signature
             imageSource: "asset:///images/ic_action_favorite_off.png"
-        },
-        
-        ActionItem {
-            title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
-            ActionBar.placement: ActionBarPlacement.OnBar
-            imageSource: "asset:///images/ic_settings.png"
         }
     ]
     
