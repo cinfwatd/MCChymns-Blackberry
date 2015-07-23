@@ -46,6 +46,16 @@ Page {
         bottomPadding: ui.du(3)
         leftPadding: ui.du(3)
         
+        gestureHandlers: [
+            DoubleTapHandler {
+                onDoubleTapped: {
+                    console.log("Double tab")
+                    
+                    chorusContainer.setVisible(!chorusContainer.visible)
+                }
+            }
+        ]
+        
         Container {
             id: stanzasContainer
             layout: StackLayout {
