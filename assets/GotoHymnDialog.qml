@@ -9,6 +9,10 @@ Dialog {
         }
     ]
     
+    onClosed: {
+        selectedHymn.text = ""
+    }
+    
     function buttonPressed(value) {
         var intValue = parseInt(selectedHymn.text + value, 10)
         
