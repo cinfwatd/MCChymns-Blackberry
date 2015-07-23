@@ -99,7 +99,6 @@
     <asset path="icon96.png">icon96.png</asset>
     <asset path="icon90.png">icon90.png</asset>
     <asset path="icon86.png">icon86.png</asset>
-    <asset path="splash-768x1280.png">splash-768x1280.png</asset>
 
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

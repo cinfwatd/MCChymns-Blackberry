@@ -1,4 +1,5 @@
-import bb.cascades 1.3
+import bb.cascades 1.4
+import bb.cascades.datamanager 1.2
 
 NavigationPane {
     id: navigationPane
@@ -15,74 +16,58 @@ NavigationPane {
             ListView {
                 id: hymns
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
-                dataModel: XmlDataModel {
-                    source: "data.xml"
-                }
-                
+                dataModel: dm
                 listItemComponents: [
                     ListItemComponent {
-                        type: "item"
                         
-                        StandardListItem {
+                        CustomListItem {
                             id: itemRoot
-                            title: ListItemData.name
-                            description: ListItemData.description
-                            imageSource: "asset:///images/ic_action_bulb.png"
-                            
-                            contextActions: [
-                                ActionSet {
-                                    title: "Contact"
-                                    actions: [
-                                        DeleteActionItem {
-                                            title: "Remove"
-                                            enabled: true
-                                            imageSource: "asset:///images/ic_delete.png"
-                                            
-                                            onTriggered: {
-                                                var listView = itemRoot.ListItem.view
-                                                listView.dataModel.removeIndex(0)
-                                            }
-                                        }
-                                    ]
+                            content: Container {
+                                layout: StackLayout {
+                                    orientation: LayoutOrientation.LeftToRight
                                 }
-                            ]
+                                verticalAlignment: VerticalAlignment.Fill
+                                rightPadding: ui.du(2)
+                                leftPadding: ui.du(1)
+                                
+                                Label {
+                                    text: ListItemData.hymn_number
+                                    textStyle.base: SystemDefaults.TextStyles.SubtitleText
+                                    layoutProperties: StackLayoutProperties {
+                                        spaceQuota: -1
+                                    }
+                                    textStyle.textAlign: TextAlign.Right
+                                    verticalAlignment: VerticalAlignment.Center
+//                                    horizontalAlignment: HorizontalAlignment.Fill
+                                    preferredWidth: ui.du(8)
+                                }
+                                
+                                Container {
+                                    preferredHeight: ui.du(6)
+                                    preferredWidth: ui.du(0.2)
+                                    background: Color.LightGray
+                                    verticalAlignment: VerticalAlignment.Center
+                                    layoutProperties: StackLayoutProperties {
+//                                        spaceQuota: -1
+                                    }
+                                }
+                                
+                                Label {
+                                    function getThis(val) {
+                                        var index = val.indexOf("\\n")
+                                        if (index == -1) return val
+                                        return val.substr(0, val.indexOf("\\n"))
+                                    }
+                                    text: getThis(ListItemData.stanza_)
+                                    layoutProperties: StackLayoutProperties {
+                                        spaceQuota: 1
+                                    }
+                                    verticalAlignment: VerticalAlignment.Center
+                                }
+                            }
                         }
                     }
                 ]
-                multiSelectAction: MultiSelectActionItem {
-                    
-                }
-                
-                
-                
-                multiSelectHandler {
-                    actions: [
-                        ActionItem {
-                            imageSource: "asset:///images/ic_delete.png"
-                            title: "Remove"
-                        }
-                    ]
-                    
-                    
-                    // Set the initial status text of multiple 
-                    // selection mode. When the mode is first 
-                    // enabled, no items are selected.
-                    status: "None selected"
-                }
-                
-                // When a list item is selected or deselected, 
-                // update the status text to reflect the number
-                // of items that are currently selected
-                onSelectionChanged: {
-                    if (selectionList().length > 1) {
-                        multiSelectHandler.status = selectionList().length +
-                        " items selected";
-                    } else if (selectionList().length == 1) {
-                        multiSelectHandler.status = "1 item selected";
-                    } else {
-                        multiSelectHandler.status = "None selected";
-                    }
-                }
                 
                 onTriggered: {
                     if (indexPath.length > 1) {
@@ -118,11 +103,6 @@ NavigationPane {
                 ActionBar.placement: ActionBarPlacement.OnBar
                 imageSource: "asset:///images/ic_sort.png"
             }
-            ,
-            MultiSelectActionItem {
-                title: "Select hymns"
-                multiSelectHandler: hymns.multiSelectHandler
-            }
         ]
     }
     
@@ -130,9 +110,28 @@ NavigationPane {
         ComponentDefinition {
             id: hymnViewDefinition
             source: "hymnView.qml"
+        },
+        
+        AsyncDataModel {
+            id: dm
+            query: SqlDataQuery {
+                source: "asset:///sql/MCCHymns.db"
+                query: "select distinct hymn_number, stanza_ from hymns_view where stanza_number = 1 order by hymn_number ASC"
+                countQuery: "select count(*) from hymns_view where stanza_number = 1"
+                onError: {
+                    console.log("query error: " + code +", " + message)
+                }
+            }
+            onLoaded: {
+                console.log("Initial model data is loaded")
+            }
         }
     ]
     onPopTransitionEnded: {
         page.destroy()
+    }
+    
+    onCreationCompleted: {
+        dm.load()
     }
 }
