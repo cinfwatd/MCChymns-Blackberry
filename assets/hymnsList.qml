@@ -1,4 +1,4 @@
-import bb.cascades 1.4
+import bb.cascades 1.3
 
 NavigationPane {
     id: navigationPane
@@ -13,10 +13,75 @@ NavigationPane {
         
         Container {
             ListView {
-                id: hymnsList
+                id: hymns
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
                 dataModel: XmlDataModel {
                     source: "data.xml"
+                }
+                
+                listItemComponents: [
+                    ListItemComponent {
+                        type: "item"
+                        
+                        StandardListItem {
+                            id: itemRoot
+                            title: ListItemData.name
+                            description: ListItemData.description
+                            imageSource: "asset:///images/ic_action_bulb.png"
+                            
+                            contextActions: [
+                                ActionSet {
+                                    title: "Contact"
+                                    actions: [
+                                        DeleteActionItem {
+                                            title: "Remove"
+                                            enabled: true
+                                            imageSource: "asset:///images/ic_delete.png"
+                                            
+                                            onTriggered: {
+                                                var listView = itemRoot.ListItem.view
+                                                listView.dataModel.removeIndex(0)
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+                multiSelectAction: MultiSelectActionItem {
+                    
+                }
+                
+                
+                
+                multiSelectHandler {
+                    actions: [
+                        ActionItem {
+                            imageSource: "asset:///images/ic_delete.png"
+                            title: "Remove"
+                        }
+                    ]
+                    
+                    
+                    // Set the initial status text of multiple 
+                    // selection mode. When the mode is first 
+                    // enabled, no items are selected.
+                    status: "None selected"
+                }
+                
+                // When a list item is selected or deselected, 
+                // update the status text to reflect the number
+                // of items that are currently selected
+                onSelectionChanged: {
+                    if (selectionList().length > 1) {
+                        multiSelectHandler.status = selectionList().length +
+                        " items selected";
+                    } else if (selectionList().length == 1) {
+                        multiSelectHandler.status = "1 item selected";
+                    } else {
+                        multiSelectHandler.status = "None selected";
+                    }
                 }
                 
                 onTriggered: {
@@ -52,6 +117,11 @@ NavigationPane {
                 title: qsTr("Sort By") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.OnBar
                 imageSource: "asset:///images/ic_sort.png"
+            }
+            ,
+            MultiSelectActionItem {
+                title: "Select hymns"
+                multiSelectHandler: hymns.multiSelectHandler
             }
         ]
     }

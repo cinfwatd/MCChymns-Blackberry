@@ -132,17 +132,17 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="36"/>
+        <location filename="../assets/hymnsList.qml" line="101"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="46"/>
+        <location filename="../assets/hymnsList.qml" line="111"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="52"/>
+        <location filename="../assets/hymnsList.qml" line="117"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>

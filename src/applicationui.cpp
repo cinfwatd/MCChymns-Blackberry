@@ -51,6 +51,12 @@ ApplicationUI::ApplicationUI() :
 //    qml->setContextProperty("appSettings", new AppSettings(this));
     qml->setContextProperty("appSettings", new AppSettings(this));
 
+//    qml->setContextProperty("app", this);
+//    QDeclarativeEngine *engine = QmlDocument::defaultDeclarativeEngine();
+//    QDeclarativeContext *rootContext = engine->rootContext();
+//    rootContext->setContextProperty("app", this);
+
+
     // Create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
 
