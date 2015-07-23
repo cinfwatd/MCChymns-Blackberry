@@ -58,12 +58,12 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="156"/>
+        <location filename="../assets/Settings.qml" line="151"/>
         <source>Background Texture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="161"/>
+        <location filename="../assets/Settings.qml" line="156"/>
         <source>Use textured background</source>
         <translation type="unfinished"></translation>
     </message>

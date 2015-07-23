@@ -37,7 +37,12 @@ Dialog {
         layout: DockLayout {}
         
         onTouch: {
-            console.log("On touch")
+            if (event.propagationPhase == PropagationPhase.AtTarget) {
+                
+                if (event.touchType == TouchType.Up) {
+                    close()
+                }
+            }
         }
         
         Container {
