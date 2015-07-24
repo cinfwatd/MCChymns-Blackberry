@@ -13,6 +13,10 @@ NavigationPane {
         }
         
         Container {
+            id: outerDock
+            layout: DockLayout {
+                
+            }
             ListView {
                 id: favHymns
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
@@ -94,8 +98,6 @@ NavigationPane {
                 
                 }
                 
-                
-                
                 multiSelectHandler {
                     actions: [
                         ActionItem {
@@ -133,6 +135,32 @@ NavigationPane {
                         contentPage.hymnNumber = chosenItem.hymn_number
                         navigationPane.push(contentPage)
                     }
+                }
+            }
+            
+            Container {
+                id: bgContainer
+                verticalAlignment: VerticalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Center
+                
+                ImageView {
+                    id: bgImage
+                    imageSource: "asset:///images/ic_hymn_gray.png"
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+                
+                Label {
+                    text: qsTr("No hymn found") + Retranslate.onLocaleOrLanguageChanged
+                    textStyle.base: SystemDefaults.TextStyles.TitleText
+                    textStyle.color: ui.palette.primary
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+                
+                Label {
+                    text: qsTr("Add hymn to Favorites and it will show up here.")
+                    textStyle.base: SystemDefaults.TextStyles.SubtitleText
+                    horizontalAlignment: HorizontalAlignment.Center
+                    topMargin: ui.du(0)
                 }
             }
         }
@@ -192,6 +220,19 @@ NavigationPane {
             }
             onLoaded: {
                 console.log("Initial model data is loaded")
+                bgContainer.visible = dm.childCount([]) == 0 ? true : false
+            }
+            
+            onItemRemoved: {
+                bgContainer.visible = dm.childCount([]) == 0 ? true : false
+            }
+            
+            onItemAdded: {
+                bgContainer.visible = dm.childCount([]) == 0 ? true : false
+            }
+            
+            onItemsChanged: {
+                bgContainer.visible = dm.childCount([]) == 0 ? true : false
             }
         }
     ]

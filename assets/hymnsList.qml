@@ -13,6 +13,10 @@ NavigationPane {
         }
         
         Container {
+            id: outerDock
+            layout: DockLayout {
+                
+            }
             ListView {
                 id: hymns
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
@@ -69,6 +73,10 @@ NavigationPane {
                     }
                 ]
                 
+                onDataModelChanged: {
+                    hymns.empty = isDataModelEmpty(dataModel)
+                }
+                
                 onTriggered: {
                     if (indexPath.length == 1) {
                         var chosenItem = dataModel.data(indexPath)
@@ -77,6 +85,25 @@ NavigationPane {
                         contentPage.hymnNumber = chosenItem.hymn_number
                         navigationPane.push(contentPage)
                     }
+                }
+            }
+            
+            Container {
+                id: bgContainer
+                verticalAlignment: VerticalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Center
+                
+                ImageView {
+                    id: bgImage
+                    imageSource: "asset:///images/ic_hymn_gray.png"
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+                
+                Label {
+                    text: qsTr("Loading hymns ...") + Retranslate.onLocaleOrLanguageChanged
+                    textStyle.base: SystemDefaults.TextStyles.TitleText
+                    textStyle.color: ui.palette.primary
+                    horizontalAlignment: HorizontalAlignment.Center
                 }
             }
         }
@@ -96,6 +123,9 @@ NavigationPane {
                 title: qsTr("Search") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.Signature
                 imageSource: "asset:///images/ic_search.png"
+                onTriggered: {
+                    TitleBarKind.FreeForm
+                }
             },
             
             ActionItem {
@@ -124,7 +154,12 @@ NavigationPane {
                 }
             }
             onLoaded: {
-                console.log("Initial model data is loaded")
+                console.log("Initial model data is loaded" )
+                bgContainer.visible = dm.childCount([]) == 0 ? true : false
+            }
+            
+            onItemsChanged: {
+                console.log("Items changed")
             }
         }
     ]

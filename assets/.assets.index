@@ -1,5 +1,5 @@
 1
-27
+28
 favoritesList.qml
 Settings.qml
 hymnView.qml
@@ -13,6 +13,7 @@ images/ic_settings.png
 images/ic_action_favorite_on.png
 images/ic_search.png
 images/ic_action_sliders.png
+images/ic_hymn_gray.png
 images/ic_action_bulb.png
 images/ic_action_favorite_off.png
 images/ic_delete_prior.png

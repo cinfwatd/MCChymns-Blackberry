@@ -55,6 +55,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/images/ic_delete.png) \
         $$quote($$BASEDIR/assets/images/ic_delete_prior.png) \
         $$quote($$BASEDIR/assets/images/ic_feedback.png) \
+        $$quote($$BASEDIR/assets/images/ic_hymn_gray.png) \
         $$quote($$BASEDIR/assets/images/ic_info.png) \
         $$quote($$BASEDIR/assets/images/ic_search.png) \
         $$quote($$BASEDIR/assets/images/ic_settings.png) \
