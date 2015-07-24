@@ -1,8 +1,10 @@
 import bb.cascades 1.4
 
 Page {
+    property int hymnNumber
+    
     titleBar: TitleBar {
-        title: qsTr("HymnView") + Retranslate.onLocaleOrLanguageChanged
+        title: qsTr("HymnView" + hymnNumber) + Retranslate.onLocaleOrLanguageChanged
         kind: TitleBarKind.Default
         appearance: TitleBarAppearance.Branded
     }

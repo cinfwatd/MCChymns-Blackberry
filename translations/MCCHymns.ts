@@ -104,22 +104,17 @@ as compiled under the direction of</source>
 <context>
     <name>hymnView</name>
     <message>
-        <location filename="../assets/hymnView.qml" line="5"/>
-        <source>HymnView</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/hymnView.qml" line="19"/>
+        <location filename="../assets/hymnView.qml" line="21"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="29"/>
+        <location filename="../assets/hymnView.qml" line="31"/>
         <source> Add to Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="86"/>
+        <location filename="../assets/hymnView.qml" line="88"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>
@@ -137,17 +132,17 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="87"/>
+        <location filename="../assets/hymnsList.qml" line="86"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="97"/>
+        <location filename="../assets/hymnsList.qml" line="96"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="103"/>
+        <location filename="../assets/hymnsList.qml" line="102"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>

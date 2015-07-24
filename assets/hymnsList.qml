@@ -70,11 +70,11 @@ NavigationPane {
                 ]
                 
                 onTriggered: {
-                    if (indexPath.length > 1) {
+                    if (indexPath.length == 1) {
                         var chosenItem = dataModel.data(indexPath)
                         var contentPage = hymnViewDefinition.createObject()
                         
-//                        contentPage.itemPageTitle = chosenItem.name
+                        contentPage.hymnNumber = chosenItem.hymn_number
                         navigationPane.push(contentPage)
                     }
                 }
@@ -116,8 +116,9 @@ NavigationPane {
             id: dm
             query: SqlDataQuery {
                 source: "asset:///sql/MCCHymns.db"
-                query: "select distinct hymn_number, stanza_ from hymns_view where stanza_number = 1 order by hymn_number ASC"
+                query: "select distinct hymn_number, _id, stanza_ from hymns_view where stanza_number = 1 order by hymn_number ASC"
                 countQuery: "select count(*) from hymns_view where stanza_number = 1"
+                keyColumn: "_id"
                 onError: {
                     console.log("query error: " + code +", " + message)
                 }
