@@ -57,28 +57,39 @@ Dialog {
             background: Color.White
             
             Container {
-                layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
-                }
-                bottomMargin: 20
+                bottomMargin: ui.du(2)
                 
-                TextField {
-                    id: selectedHymn
-                    hintText: "Hymn number ..."
-                    layoutProperties: StackLayoutProperties {
-                        spaceQuota: 2.1
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
                     }
-                    maximumLength: 4
+                    
+                    TextField {
+                        id: selectedHymn
+                        hintText: "Hymn number ..."
+                        layoutProperties: StackLayoutProperties {
+                            spaceQuota: 2.1
+                        }
+                        maximumLength: 4
+                        inputMode: TextFieldInputMode.Custom
+                        backgroundVisible: false
+                    }
+                    
+                    CustomButton {
+                        id: clear
+                        imageSource: "asset:///images/ic_action_clear.png"
+                        layoutProperties: StackLayoutProperties {
+                            spaceQuota: 1
+                        }
+                        onClicked: {
+                            backPressed()
+                        }
+                    }
                 }
                 
-                Button {
-                    id: clear
-                    imageSource: "asset:///images/ic_action_clear.png"
-                    layoutProperties: StackLayoutProperties {
-                        spaceQuota: 1
-                    }
-                    onClicked: {
-                        backPressed()
+                Container {
+                    Divider {
+                        
                     }
                 }
             }
@@ -87,9 +98,9 @@ Dialog {
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                bottomMargin: 20
+                bottomMargin: ui.du(2)
                 
-                Button {
+                CustomButton {
                     id: one
                     text: "1"
                     
@@ -98,7 +109,7 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
                     id: two
                     text: "2"
                     onClicked: {
@@ -106,7 +117,7 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
                     id: three
                     text: "3"
                     onClicked: {
@@ -119,9 +130,9 @@ Dialog {
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                bottomMargin: 20
+                bottomMargin: ui.du(2)
                 
-                Button {
+                CustomButton {
                     id: four
                     text: "4"
                     onClicked: {
@@ -129,7 +140,7 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
                     id: five
                     text: "5"
                     onClicked: {
@@ -137,7 +148,7 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
                     id: six
                     text: "6"
                     onClicked: {
@@ -150,9 +161,9 @@ Dialog {
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                bottomMargin: 20
+                bottomMargin: ui.du(2)
                 
-                Button {
+                CustomButton {
                     id: seven
                     text: "7"
                     onClicked: {
@@ -160,7 +171,7 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
                     id: eight
                     text: "8"
                     onClicked: {
@@ -168,7 +179,7 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
                     id: nine
                     text: "9"
                     onClicked: {
@@ -181,16 +192,13 @@ Dialog {
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
+                bottomMargin: ui.du(2)
                 
-                Button {
-                    id: cancel
-                    text: "Cancel"
-                    onClicked: {
-                        close()
-                    }
+                CustomButton {
+                    highlightable: false
                 }
                 
-                Button {
+                CustomButton {
                     id: zero
                     text: "0"
                     onClicked: {
@@ -198,18 +206,42 @@ Dialog {
                     }
                 }
                 
-                Button {
+                CustomButton {
+                    highlightable: false
+                }
+            }
+            
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
+                }
+                
+                CustomButton {
+                    highlightable: false
+                }
+                
+                CustomButton {
+                    id: cancel
+                    text: "Cancel"
+                    onClicked: {
+                        close()
+                    }
+                    label.textStyle.color: ui.palette.primary
+                }
+                
+                CustomButton {
                     id: open
                     text: "Open"
                     onClicked: {
                         
                         var value = parseInt(selectedHymn.text, 10)
                         if (!isNaN(value)) {
-//                            open the selected hymn
+                            //                            open the selected hymn
                         } else {
                             toast.show()
                         }
                     }
+                    label.textStyle.color: ui.palette.primary
                 }
             }
         }
