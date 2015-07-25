@@ -69,7 +69,7 @@ TabbedPane {
             title: "About"
             imageSource: "asset:///images/ic_action_bulb.png"
             onTriggered: {
-                if (tappedPane.activePane != about) {
+                if (tappedPane.activeTab != about) {
                     aboutSheet.open()
                 }
             }

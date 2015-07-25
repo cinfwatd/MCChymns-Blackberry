@@ -142,22 +142,22 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="103"/>
+        <location filename="../assets/hymnsList.qml" line="99"/>
         <source>Loading hymns ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="113"/>
+        <location filename="../assets/hymnsList.qml" line="109"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="123"/>
+        <location filename="../assets/hymnsList.qml" line="119"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="132"/>
+        <location filename="../assets/hymnsList.qml" line="128"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>

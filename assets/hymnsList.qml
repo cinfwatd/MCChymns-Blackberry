@@ -73,10 +73,6 @@ NavigationPane {
                     }
                 ]
                 
-                onDataModelChanged: {
-                    hymns.empty = isDataModelEmpty(dataModel)
-                }
-                
                 onTriggered: {
                     if (indexPath.length == 1) {
                         var chosenItem = dataModel.data(indexPath)

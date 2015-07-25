@@ -26,7 +26,7 @@ Dialog {
             maxWidth: ui.du(59.7)
             topPadding: ui.du(5)
             bottomPadding: ui.du(3)
-            preferredWidth: maxWidth
+            preferredWidth: ui.du(59.7)
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             background: Color.White
