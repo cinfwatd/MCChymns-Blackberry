@@ -58,7 +58,7 @@ Dialog {
                     onTouch: {
                         if (event.propagationPhase == PropagationPhase.AtTarget) {
                             if (event.touchType == TouchType.Down) {
-                                hymnNumberContainer.background = Color.LightGray
+                                hymnNumberContainer.background = Color.create("#DCDCDC")
                             }
                             if (event.touchType == TouchType.Up || 
                                 event.touchType == TouchType.Move) {
@@ -87,7 +87,7 @@ Dialog {
                     onTouch: {
                         if (event.propagationPhase == PropagationPhase.AtTarget) {
                             if (event.touchType == TouchType.Down) {
-                                firstLinesContainer.background = Color.LightGray
+                                firstLinesContainer.background = Color.create("#DCDCDC");
                             }
                             if (event.touchType == TouchType.Up ||
                                 event.touchType == TouchType.Move) {
