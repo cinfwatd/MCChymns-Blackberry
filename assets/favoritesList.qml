@@ -20,13 +20,20 @@ NavigationPane {
             ListView {
                 id: favHymns
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
-                //                dataModel: XmlDataModel {
-                //                    source: "data.xml"
-                //                }
                 dataModel: dm
+                layout: StackListLayout {
+                    headerMode: ListHeaderMode.Sticky
+                }
                 listItemComponents: [
                     ListItemComponent {
-                        
+                      type: "header"
+                      Header {
+                          title: ListItemData.header
+                          subtitle: ListItemData.topic
+                      }  
+                    },
+                    ListItemComponent {
+                        type: ""
                         CustomListItem {
                             id: itemRoot
                             content: Container {
@@ -211,12 +218,14 @@ NavigationPane {
             source: "hymnView.qml"
         },
         
-        AsyncDataModel {
+        AsyncHeaderDataModel {
             id: dm
-            query: SqlDataQuery {
+            query: SqlHeaderDataQuery {
                 source: "asset:///sql/MCCHymns.db"
                 query: "SELECT DISTINCT hymn_number, _id, stanza_ FROM hymns_view WHERE stanza_number = 1 AND favourite IS NOT NULL ORDER BY hymn_number ASC"
                 countQuery: "SELECT COUNT(*) FROM hymns_view WHERE stanza_number = 1 AND favourite IS NOT NULL"
+                headerQuery: "select subject as header, topic, count(*) from hymns_view h, topic t, subject s " + 
+                "where h.topic_id = t._id and t.subject_id = s._id and stanza_number = 1 AND favourite IS NOT NULL group by topic_id"
                 keyColumn: "_id"
                 onError: {
                     console.log("query error: " + code +", " + message)

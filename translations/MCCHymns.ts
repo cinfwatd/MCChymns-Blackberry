@@ -81,32 +81,32 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="153"/>
+        <location filename="../assets/favoritesList.qml" line="160"/>
         <source>No hymn found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="160"/>
+        <location filename="../assets/favoritesList.qml" line="167"/>
         <source>Add hymn to Favorites and it will show up here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="170"/>
+        <location filename="../assets/favoritesList.qml" line="177"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="180"/>
+        <location filename="../assets/favoritesList.qml" line="187"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="186"/>
+        <location filename="../assets/favoritesList.qml" line="193"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="196"/>
+        <location filename="../assets/favoritesList.qml" line="203"/>
         <source>Remove All</source>
         <translation type="unfinished"></translation>
     </message>
@@ -142,22 +142,22 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="99"/>
+        <location filename="../assets/hymnsList.qml" line="109"/>
         <source>Loading hymns ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="109"/>
+        <location filename="../assets/hymnsList.qml" line="119"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="119"/>
+        <location filename="../assets/hymnsList.qml" line="129"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="128"/>
+        <location filename="../assets/hymnsList.qml" line="138"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>

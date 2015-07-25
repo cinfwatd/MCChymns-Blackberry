@@ -21,9 +21,19 @@ NavigationPane {
                 id: hymns
                 accessibility.description: qsTr("List of all the hymns") + Retranslate.onLocaleOrLanguageChanged
                 dataModel: dm
+                layout: StackListLayout {
+                    headerMode: ListHeaderMode.Sticky
+                }
                 listItemComponents: [
                     ListItemComponent {
-                        
+                        type: "header"
+                        Header {
+                            title: ListItemData.header
+                            subtitle: ListItemData.topic
+                        }
+                    },
+                    ListItemComponent {
+                        type: ""
                         CustomListItem {
                             id: itemRoot
                             content: Container {
@@ -74,7 +84,7 @@ NavigationPane {
                 ]
                 
                 onTriggered: {
-                    if (indexPath.length == 1) {
+                    if (indexPath.length > 1) {
                         var chosenItem = dataModel.data(indexPath)
                         var contentPage = hymnViewDefinition.createObject()
                         
@@ -142,12 +152,14 @@ NavigationPane {
             source: "hymnView.qml"
         },
         
-        AsyncDataModel {
+        AsyncHeaderDataModel {
             id: dm
-            query: SqlDataQuery {
+            query: SqlHeaderDataQuery {
                 source: "asset:///sql/MCCHymns.db"
-                query: "select distinct hymn_number, _id, stanza_ from hymns_view where stanza_number = 1 order by hymn_number ASC"
+                query: "select distinct hymn_number, _id, stanza_, topic_id from hymns_view where stanza_number = 1 order by hymn_number ASC"
                 countQuery: "select count(*) from hymns_view where stanza_number = 1"
+                headerQuery: "select subject as header, topic, count(*) from hymns_view h, topic t, subject s " + 
+                    "where h.topic_id = t._id and t.subject_id = s._id and stanza_number = 1 group by topic_id"
                 keyColumn: "_id"
                 onError: {
                     console.log("query error: " + code +", " + message)
