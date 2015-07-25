@@ -60,7 +60,8 @@ Dialog {
                             if (event.touchType == TouchType.Down) {
                                 hymnNumberContainer.background = Color.LightGray
                             }
-                            if (event.touchType == TouchType.Up) {
+                            if (event.touchType == TouchType.Up || 
+                                event.touchType == TouchType.Move) {
                                 hymnNumberContainer.resetBackground()
                                 
                                 sortTypeSelected(0)
@@ -88,7 +89,8 @@ Dialog {
                             if (event.touchType == TouchType.Down) {
                                 firstLinesContainer.background = Color.LightGray
                             }
-                            if (event.touchType == TouchType.Up) {
+                            if (event.touchType == TouchType.Up ||
+                                event.touchType == TouchType.Move) {
                                 firstLinesContainer.resetBackground()
                                 sortTypeSelected(1)
                             }
