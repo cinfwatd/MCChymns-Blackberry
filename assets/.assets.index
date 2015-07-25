@@ -1,5 +1,5 @@
 1
-28
+29
 favoritesList.qml
 Settings.qml
 hymnView.qml
@@ -26,5 +26,6 @@ About.qml
 main.qml
 hymnsList.qml
 GotoHymnDialog.qml
+SortByDialog.qml
 sql/MCCHymns.db
 data.xml

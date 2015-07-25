@@ -106,7 +106,7 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="192"/>
+        <location filename="../assets/favoritesList.qml" line="196"/>
         <source>Remove All</source>
         <translation type="unfinished"></translation>
     </message>
@@ -165,29 +165,29 @@ as compiled under the direction of</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="85"/>
+        <location filename="../assets/main.qml" line="89"/>
         <source>Feedback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="94"/>
+        <location filename="../assets/main.qml" line="98"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="106"/>
+        <location filename="../assets/main.qml" line="110"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="32"/>
-        <location filename="../assets/main.qml" line="118"/>
+        <location filename="../assets/main.qml" line="122"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="49"/>
-        <location filename="../assets/main.qml" line="130"/>
+        <location filename="../assets/main.qml" line="134"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>

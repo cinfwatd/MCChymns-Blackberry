@@ -186,6 +186,10 @@ NavigationPane {
                 title: qsTr("Sort By") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.OnBar
                 imageSource: "asset:///images/ic_sort.png"
+                
+                onTriggered: {
+                    sortBy.open()
+                }
             },
             
             ActionItem {

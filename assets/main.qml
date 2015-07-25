@@ -57,6 +57,10 @@ TabbedPane {
                     }
                 }
             }
+        },
+        
+        SortByDialog {
+            id: sortBy
         }
     ]
     

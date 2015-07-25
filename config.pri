@@ -39,6 +39,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/About.qml) \
         $$quote($$BASEDIR/assets/GotoHymnDialog.qml) \
         $$quote($$BASEDIR/assets/Settings.qml) \
+        $$quote($$BASEDIR/assets/SortByDialog.qml) \
         $$quote($$BASEDIR/assets/Stanza.qml) \
         $$quote($$BASEDIR/assets/data.xml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
