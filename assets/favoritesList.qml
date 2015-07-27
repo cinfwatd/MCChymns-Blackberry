@@ -3,14 +3,20 @@ import bb.cascades.datamanager 1.2
 
 NavigationPane {
     id: navigationPane
+    property bool searchBarOn: false
+    function toggleSearchBar() {
+        if (searchBarOn) {
+            favoritesPage.titleBar = defaultBar
+            searchBarOn = false
+        } else {
+            favoritesPage.titleBar = searchBar
+            searchBarOn = true
+        }
+    }
     
     Page {
-        titleBar: TitleBar {
-            title: qsTr("Favorites") + Retranslate.onLocaleOrLanguageChanged
-            kind: TitleBarKind.Default
-            appearance: TitleBarAppearance.Branded
-        
-        }
+        id: favoritesPage
+        titleBar: defaultBar
         
         Container {
             id: outerDock
@@ -187,6 +193,10 @@ NavigationPane {
                 title: qsTr("Search") + Retranslate.onLocaleOrLanguageChanged
                 ActionBar.placement: ActionBarPlacement.Signature
                 imageSource: "asset:///images/ic_search.png"
+                
+                onTriggered: {
+                    toggleSearchBar()
+                }
             },
             
             ActionItem {
@@ -247,6 +257,34 @@ NavigationPane {
             onItemsChanged: {
                 bgContainer.visible = dm.childCount([]) == 0 ? true : false
             }
+        },
+        
+        TitleBar {
+                    id: searchBar
+                    kind: TitleBarKind.TextField
+                    appearance: TitleBarAppearance.Branded
+                    kindProperties: TextFieldTitleBarKindProperties {
+                        textField.backgroundVisible: true
+                        
+                        textField.hintText: "Search favorite hymns..."
+                        textField.onTextChanging: {
+                            console.log("Text changing = ", text)
+                        }
+                    }
+                    
+                    dismissAction: ActionItem {
+                        title: "Close"
+                        onTriggered: {
+                            toggleSearchBar()
+                        }
+                    }
+        },
+        
+        TitleBar {
+            id: defaultBar
+            title: qsTr("Favorites") + Retranslate.onLocaleOrLanguageChanged
+            kind: TitleBarKind.Default
+            appearance: TitleBarAppearance.Branded
         }
     ]
     onPopTransitionEnded: {

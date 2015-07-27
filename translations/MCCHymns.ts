@@ -71,43 +71,43 @@ as compiled under the direction of</source>
 <context>
     <name>favoritesList</name>
     <message>
-        <location filename="../assets/favoritesList.qml" line="9"/>
-        <source>Favorites</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/favoritesList.qml" line="22"/>
+        <location filename="../assets/favoritesList.qml" line="28"/>
         <source>List of all the hymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="160"/>
+        <location filename="../assets/favoritesList.qml" line="166"/>
         <source>No hymn found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="167"/>
+        <location filename="../assets/favoritesList.qml" line="173"/>
         <source>Add hymn to Favorites and it will show up here.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="177"/>
+        <location filename="../assets/favoritesList.qml" line="183"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="187"/>
+        <location filename="../assets/favoritesList.qml" line="193"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="193"/>
+        <location filename="../assets/favoritesList.qml" line="203"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/favoritesList.qml" line="203"/>
+        <location filename="../assets/favoritesList.qml" line="213"/>
         <source>Remove All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/favoritesList.qml" line="285"/>
+        <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -132,33 +132,33 @@ as compiled under the direction of</source>
 <context>
     <name>hymnsList</name>
     <message>
-        <location filename="../assets/hymnsList.qml" line="9"/>
-        <source>MCCHymns</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/hymnsList.qml" line="22"/>
+        <location filename="../assets/hymnsList.qml" line="28"/>
         <source>List of all the hymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="109"/>
+        <location filename="../assets/hymnsList.qml" line="115"/>
         <source>Loading hymns ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="119"/>
+        <location filename="../assets/hymnsList.qml" line="125"/>
         <source>Goto Hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="129"/>
+        <location filename="../assets/hymnsList.qml" line="135"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="138"/>
+        <location filename="../assets/hymnsList.qml" line="144"/>
         <source>Sort By</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/hymnsList.qml" line="206"/>
+        <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

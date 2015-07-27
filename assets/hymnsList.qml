@@ -3,14 +3,20 @@ import bb.cascades.datamanager 1.2
 
 NavigationPane {
     id: navigationPane
+    property bool searchBarOn: false
+    function toggleSearchBar() {
+        if (searchBarOn) {
+            hymnsPage.titleBar = defaultBar
+            searchBarOn = false
+        } else {
+            hymnsPage.titleBar = searchBar
+            searchBarOn = true
+        }
+    }
     
     Page {
-        titleBar: TitleBar {
-            title: qsTr("MCCHymns") + Retranslate.onLocaleOrLanguageChanged
-            kind: TitleBarKind.Default
-            appearance: TitleBarAppearance.Branded
-               
-        }
+        id: hymnsPage
+        titleBar: defaultBar
         
         Container {
             id: outerDock
@@ -130,7 +136,7 @@ NavigationPane {
                 ActionBar.placement: ActionBarPlacement.Signature
                 imageSource: "asset:///images/ic_search.png"
                 onTriggered: {
-                    TitleBarKind.FreeForm
+                    toggleSearchBar()
                 }
             },
             
@@ -173,6 +179,33 @@ NavigationPane {
             onItemsChanged: {
                 console.log("Items changed")
             }
+        },
+        TitleBar {
+            id: searchBar
+            kind: TitleBarKind.TextField
+            appearance: TitleBarAppearance.Branded
+            kindProperties: TextFieldTitleBarKindProperties {
+                textField.backgroundVisible: true
+                
+                textField.hintText: "Search hymns..."
+                textField.onTextChanging: {
+                    console.log("Text changing = ", text)
+                }
+            }
+            
+            dismissAction: ActionItem {
+                title: "Close"
+                onTriggered: {
+                    toggleSearchBar()
+                }
+            }
+        },
+        
+        TitleBar {
+            id: defaultBar
+            title: qsTr("MCCHymns") + Retranslate.onLocaleOrLanguageChanged
+            kind: TitleBarKind.Default
+            appearance: TitleBarAppearance.Branded
         }
     ]
     onPopTransitionEnded: {
