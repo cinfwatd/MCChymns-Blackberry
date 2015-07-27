@@ -58,27 +58,24 @@ NavigationPane {
                                     }
                                     textStyle.textAlign: TextAlign.Right
                                     verticalAlignment: VerticalAlignment.Center
-                                    //                                    horizontalAlignment: HorizontalAlignment.Fill
                                     preferredWidth: ui.du(8)
                                 }
                                 
+                                // divider
                                 Container {
                                     preferredHeight: ui.du(6)
                                     preferredWidth: ui.du(0.2)
                                     background: Color.LightGray
                                     verticalAlignment: VerticalAlignment.Center
-                                    layoutProperties: StackLayoutProperties {
-                                        //                                        spaceQuota: -1
-                                    }
                                 }
                                 
                                 Label {
-                                    function getThis(val) {
+                                    function getFirstLine(val) {
                                         var index = val.indexOf("\\n")
                                         if (index == -1) return val
                                         return val.substr(0, val.indexOf("\\n"))
                                     }
-                                    text: getThis(ListItemData.stanza_)
+                                    text: getFirstLine(ListItemData.stanza_)
                                     layoutProperties: StackLayoutProperties {
                                         spaceQuota: 1
                                     }
@@ -98,7 +95,7 @@ NavigationPane {
                                             
                                             onTriggered: {
                                                 var listView = itemRoot.ListItem.view
-                                                listView.dataModel.removeIndex(0)
+                                                listView.dataModel.itemRemoved(indexPath)
                                             }
                                         }
                                     ]
@@ -141,7 +138,7 @@ NavigationPane {
                 }
                 
                 onTriggered: {
-                    if (indexPath.length == 1) {
+                    if (indexPath.length > 1) {
                         var chosenItem = dataModel.data(indexPath)
                         var contentPage = hymnViewDefinition.createObject()
                         
