@@ -119,9 +119,9 @@ NavigationPane {
         
         actions: [
             ActionItem {
-                title: qsTr("Goto Hymn") + Retranslate.onLocaleOrLanguageChanged
-                ActionBar.placement: ActionBarPlacement.OnBar
-                imageSource: "asset:///images/ic_action_goto_hymn.png"
+                title: qsTr("Open hymn") + Retranslate.onLocaleOrLanguageChanged
+                ActionBar.placement: ActionBarPlacement.InOverflow
+                imageSource: "asset:///images/ic_show_dialpad.png"
                 
                 onTriggered: {
                     gotoHymnDialog.open()
@@ -139,7 +139,7 @@ NavigationPane {
             
             ActionItem {
                 title: qsTr("Sort By") + Retranslate.onLocaleOrLanguageChanged
-                ActionBar.placement: ActionBarPlacement.OnBar
+                ActionBar.placement: ActionBarPlacement.InOverflow
                 imageSource: "asset:///images/ic_sort.png"
                 
                 onTriggered: {
