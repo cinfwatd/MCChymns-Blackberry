@@ -46,18 +46,14 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/favoritesList.qml) \
         $$quote($$BASEDIR/assets/hymnView.qml) \
         $$quote($$BASEDIR/assets/hymnsList.qml) \
-        $$quote($$BASEDIR/assets/images/ic_action_badge.png) \
-        $$quote($$BASEDIR/assets/images/ic_action_bulb.png) \
         $$quote($$BASEDIR/assets/images/ic_action_clear.png) \
         $$quote($$BASEDIR/assets/images/ic_action_favorite_off.png) \
         $$quote($$BASEDIR/assets/images/ic_action_favorite_on.png) \
-        $$quote($$BASEDIR/assets/images/ic_action_goto_hymn.png) \
-        $$quote($$BASEDIR/assets/images/ic_action_queue_music.png) \
-        $$quote($$BASEDIR/assets/images/ic_action_sliders.png) \
         $$quote($$BASEDIR/assets/images/ic_delete.png) \
         $$quote($$BASEDIR/assets/images/ic_delete_prior.png) \
         $$quote($$BASEDIR/assets/images/ic_feedback.png) \
         $$quote($$BASEDIR/assets/images/ic_hymn_gray.png) \
+        $$quote($$BASEDIR/assets/images/ic_hymns.png) \
         $$quote($$BASEDIR/assets/images/ic_info.png) \
         $$quote($$BASEDIR/assets/images/ic_search.png) \
         $$quote($$BASEDIR/assets/images/ic_settings.png) \

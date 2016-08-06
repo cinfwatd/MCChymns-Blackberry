@@ -67,36 +67,32 @@ TabbedPane {
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             title: "About"
-            imageSource: "asset:///images/ic_action_bulb.png"
+            imageSource: "asset:///images/ic_info.png"
             onTriggered: {
-//                if (tappedPane.activeTab != about) {
-                    aboutSheet.open()
-//                }
+                aboutSheet.open()
             }
         }
         
         settingsAction: SettingsActionItem {
-            imageSource: "asset:///images/ic_action_sliders.png"
+            imageSource: "asset:///images/ic_settings.png"
             onTriggered: {
-//                if (tappedPane.activeTab != settings) {
-                    settingsSheet.open()
-                }
-//            }
+                settingsSheet.open()
+            }
         }
         
-        actions: [
-            ActionItem {
-                title: qsTr("Feedback") + Retranslate.onLocaleOrLanguageChanged
-                ActionBar.placement: ActionBarPlacement.OnBar
-                imageSource: "asset:///images/ic_feedback.png"
-            }
-        ]
+//        actions: [
+//            ActionItem {
+//                title: qsTr("Feedback") + Retranslate.onLocaleOrLanguageChanged
+//                ActionBar.placement: ActionBarPlacement.OnBar
+//                imageSource: "asset:///images/ic_feedback.png"
+//            }
+//        ]
     }
     
     Tab {
         id: hymnsList
         title: qsTr("MCCHymns") + Retranslate.onLocaleOrLanguageChanged
-        imageSource: "asset:///images/ic_action_queue_music.png"
+        imageSource: "asset:///images/ic_hymns.png"
         
         delegate: Delegate {
             id: hymnsDelegate
@@ -108,7 +104,7 @@ TabbedPane {
     Tab {
         id: favoritesList
         title: qsTr("Favorites") + Retranslate.onLocaleOrLanguageChanged
-        imageSource: "asset:///images/ic_action_badge.png"
+        imageSource: "asset:///images/ic_action_favorite_off.png"
         
         delegate: Delegate {
             id: favoritesDelegate
@@ -116,30 +112,6 @@ TabbedPane {
         }
         delegateActivationPolicy: TabDelegateActivationPolicy.Default
     }
-    
-//    Tab {
-//        id: settings
-//        title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
-//        imageSource: "asset:///images/ic_action_sliders.png"
-//        
-//        delegate: Delegate {
-//            id: settingsDelegate
-//            source: "Settings.qml"
-//        }
-//        delegateActivationPolicy: TabDelegateActivationPolicy.Default
-//    }
-//    
-//    Tab {
-//        id: about
-//        title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
-//        imageSource: "asset:///images/ic_action_bulb.png"
-//        
-//        delegate: Delegate {
-//            id: aboutDelegate
-//            source: "About.qml"
-//        }
-//        delegateActivationPolicy: TabDelegateActivationPolicy.Default
-//    }
     
     onCreationCompleted: {
         if (appSettings.startFavorites) {

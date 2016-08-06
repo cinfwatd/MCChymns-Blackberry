@@ -87,7 +87,7 @@ as compiled under the direction of</source>
     </message>
     <message>
         <location filename="../assets/favoritesList.qml" line="180"/>
-        <source>Goto Hymn</source>
+        <source>Open hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -143,7 +143,7 @@ as compiled under the direction of</source>
     </message>
     <message>
         <location filename="../assets/hymnsList.qml" line="122"/>
-        <source>Goto Hymn</source>
+        <source>Open hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -165,17 +165,12 @@ as compiled under the direction of</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="89"/>
-        <source>Feedback</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/main.qml" line="98"/>
+        <location filename="../assets/main.qml" line="94"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="110"/>
+        <location filename="../assets/main.qml" line="106"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
