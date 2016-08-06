@@ -22,8 +22,8 @@ class AppSettings : public QObject
     Q_PROPERTY( bool startFavorites READ getStartFavorites WRITE setStartFavorites NOTIFY startFavoritesChanged FINAL )
     Q_PROPERTY( QString font READ getFont WRITE setFont NOTIFY fontChanged FINAL )
     Q_PROPERTY( int fontSize READ getFontSize WRITE setFontSize NOTIFY fontSizeChanged FINAL)
-    Q_PROPERTY( int fontColor READ getFontColor WRITE setFontColor NOTIFY fontColorChanged FINAL)
-    Q_PROPERTY( int backgroundColor READ getBackgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged FINAL)
+    Q_PROPERTY( QString fontColor READ getFontColor WRITE setFontColor NOTIFY fontColorChanged FINAL)
+    Q_PROPERTY( QString backgroundColor READ getBackgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged FINAL)
     Q_PROPERTY( bool useBackgroundTexture READ getUseBackgroundTexture WRITE setUseBackgroundTexture NOTIFY useBackgroundTextureChanged FINAL)
 
 public:
@@ -33,24 +33,24 @@ public:
     bool getStartFavorites() const;
     QString getFont() const;
     int getFontSize() const;
-    int getFontColor() const;
-    int getBackgroundColor() const;
+    QString getFontColor() const;
+    QString getBackgroundColor() const;
     bool getUseBackgroundTexture() const;
 
 public slots:
     void setStartFavorites(bool startFavorites);
     void setFont(QString font);
     void setFontSize(int fontSize);
-    void setFontColor(int fontColor);
-    void setBackgroundColor(int backgroundColor);
+    void setFontColor(QString fontColor);
+    void setBackgroundColor(QString backgroundColor);
     void setUseBackgroundTexture(bool useBackgroundTexture);
 
 signals:
     void startFavoritesChanged(bool startFavorites);
     void fontChanged(QString font);
     void fontSizeChanged(int fontSize);
-    void fontColorChanged(int fontColor);
-    void backgroundColorChanged(int backgroundColor);
+    void fontColorChanged(QString fontColor);
+    void backgroundColorChanged(QString backgroundColor);
     void useBackgroundTextureChanged(bool useBackgroundTexture);
 
 private:
@@ -58,8 +58,8 @@ private:
     static const bool mDefaultStartFavorites;
     static const QString mDefaultFont;
     static const int mDefaultFontSize;
-    static const int mDefaultFontColor;
-    static const int mDefaultBackgroundColor;
+    static const QString mDefaultFontColor;
+    static const QString mDefaultBackgroundColor;
     static const bool mDefaultUseBackgroundTexture;
 
 //    Keys where the values are stored in the QSettings Object.
@@ -74,8 +74,8 @@ private:
     bool mStartFavorites;
     QString mFont;
     int mFontSize;
-    int mFontColor;
-    int mBackgroundColor;
+    QString mFontColor;
+    QString mBackgroundColor;
     bool mUseBackgroundTexture;
 };
 #endif /* APPSETTINGS_HPP_ */

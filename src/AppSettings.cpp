@@ -14,8 +14,8 @@
 const bool AppSettings::mDefaultStartFavorites(false);
 const QString AppSettings::mDefaultFont("lilac_malaria.ttf");
 const int AppSettings::mDefaultFontSize(18);
-const int AppSettings::mDefaultFontColor(0x62371A);
-const int AppSettings::mDefaultBackgroundColor(0xfff0d8a9);
+const QString AppSettings::mDefaultFontColor("#62371A");
+const QString AppSettings::mDefaultBackgroundColor("fff0d8a9");
 const bool AppSettings::mDefaultUseBackgroundTexture(true);
 
 //Settings keys.
@@ -36,8 +36,8 @@ AppSettings::AppSettings(QObject* parent) : QObject(parent)
     mStartFavorites = QSettings().value(MCCHYMNS_START_FAVORITES_KEY, mDefaultStartFavorites).toBool();
     mFont = QSettings().value(MCCHYMNS_FONT_KEY, mDefaultFont).toString();
     mFontSize = QSettings().value(MCCHYMNS_FONT_SIZE_KEY, mDefaultFontSize).toInt();
-    mFontColor = QSettings().value(MCCHYMNS_FONT_COLOR_KEY, mDefaultFontColor).toInt();
-    mBackgroundColor = QSettings().value(MCCHYMNS_BACKGROUND_COLOR_KEY, mDefaultBackgroundColor).toInt();
+    mFontColor = QSettings().value(MCCHYMNS_FONT_COLOR_KEY, mDefaultFontColor).toString();
+    mBackgroundColor = QSettings().value(MCCHYMNS_BACKGROUND_COLOR_KEY, mDefaultBackgroundColor).toString();
     mUseBackgroundTexture = QSettings().value(MCCHYMNS_USE_BACKGROUND_TEXTURE_KEY, mDefaultUseBackgroundTexture).toBool();
 }
 
@@ -60,12 +60,12 @@ int AppSettings::getFontSize() const
     return mFontSize;
 }
 
-int AppSettings::getFontColor() const
+QString AppSettings::getFontColor() const
 {
     return mFontColor;
 }
 
-int AppSettings::getBackgroundColor() const
+QString AppSettings::getBackgroundColor() const
 {
     return mBackgroundColor;
 }
@@ -102,7 +102,7 @@ void AppSettings::setFontSize(int fontSize)
     }
 }
 
-void AppSettings::setFontColor(int fontColor)
+void AppSettings::setFontColor(QString fontColor)
 {
     if (mFontColor != fontColor) {
         QSettings().setValue(MCCHYMNS_FONT_COLOR_KEY, fontColor);
@@ -111,7 +111,7 @@ void AppSettings::setFontColor(int fontColor)
     }
 }
 
-void AppSettings::setBackgroundColor(int backgroundColor)
+void AppSettings::setBackgroundColor(QString backgroundColor)
 {
     if (mBackgroundColor != backgroundColor) {
         QSettings().setValue(MCCHYMNS_BACKGROUND_COLOR_KEY, backgroundColor);
