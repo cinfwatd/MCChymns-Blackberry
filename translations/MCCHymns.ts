@@ -181,13 +181,11 @@ as compiled under the direction of</source>
     </message>
     <message>
         <location filename="../assets/main.qml" line="32"/>
-        <location filename="../assets/main.qml" line="122"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/main.qml" line="49"/>
-        <location filename="../assets/main.qml" line="134"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>

@@ -69,19 +69,19 @@ TabbedPane {
             title: "About"
             imageSource: "asset:///images/ic_action_bulb.png"
             onTriggered: {
-                if (tappedPane.activeTab != about) {
+//                if (tappedPane.activeTab != about) {
                     aboutSheet.open()
-                }
+//                }
             }
         }
         
         settingsAction: SettingsActionItem {
             imageSource: "asset:///images/ic_action_sliders.png"
             onTriggered: {
-                if (tappedPane.activeTab != settings) {
+//                if (tappedPane.activeTab != settings) {
                     settingsSheet.open()
                 }
-            }
+//            }
         }
         
         actions: [
@@ -117,29 +117,29 @@ TabbedPane {
         delegateActivationPolicy: TabDelegateActivationPolicy.Default
     }
     
-    Tab {
-        id: settings
-        title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
-        imageSource: "asset:///images/ic_action_sliders.png"
-        
-        delegate: Delegate {
-            id: settingsDelegate
-            source: "Settings.qml"
-        }
-        delegateActivationPolicy: TabDelegateActivationPolicy.Default
-    }
-    
-    Tab {
-        id: about
-        title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
-        imageSource: "asset:///images/ic_action_bulb.png"
-        
-        delegate: Delegate {
-            id: aboutDelegate
-            source: "About.qml"
-        }
-        delegateActivationPolicy: TabDelegateActivationPolicy.Default
-    }
+//    Tab {
+//        id: settings
+//        title: qsTr("Settings") + Retranslate.onLocaleOrLanguageChanged
+//        imageSource: "asset:///images/ic_action_sliders.png"
+//        
+//        delegate: Delegate {
+//            id: settingsDelegate
+//            source: "Settings.qml"
+//        }
+//        delegateActivationPolicy: TabDelegateActivationPolicy.Default
+//    }
+//    
+//    Tab {
+//        id: about
+//        title: qsTr("About") + Retranslate.onLocaleOrLanguageChanged
+//        imageSource: "asset:///images/ic_action_bulb.png"
+//        
+//        delegate: Delegate {
+//            id: aboutDelegate
+//            source: "About.qml"
+//        }
+//        delegateActivationPolicy: TabDelegateActivationPolicy.Default
+//    }
     
     onCreationCompleted: {
         if (appSettings.startFavorites) {
