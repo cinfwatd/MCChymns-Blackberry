@@ -4,8 +4,14 @@ Container {
     
     property alias stanzaNumber: stanzaNumber.text
     property alias stanza : stanza.text
-    
+        
     topMargin: ui.du(1)
+    
+    attachedObjects: [
+        FontStyleDefinition {
+            id: fontStyle
+        }
+    ]
     
     Container {
         
@@ -15,7 +21,7 @@ Container {
         
         Container {
             layout: DockLayout {}
-            Divider {
+            Dividr {
                 verticalAlignment: VerticalAlignment.Center
             }
             layoutProperties: StackLayoutProperties {
@@ -30,10 +36,11 @@ Container {
             Label {
                 id: stanzaNumber
                 text: "2"
-                textStyle.base: SystemDefaults.TextStyles.TitleText
-                textStyle.textAlign: TextAlign.Center
+            
                 horizontalAlignment: HorizontalAlignment.Center
+                textStyle.base: fontStyle.style
             }
+            
             layoutProperties: StackLayoutProperties {
                 spaceQuota: 1
             }
@@ -41,7 +48,7 @@ Container {
         
         Container {
             layout: DockLayout {}
-            Divider {
+            Dividr {
                 verticalAlignment: VerticalAlignment.Center
             }
             layoutProperties: StackLayoutProperties {
@@ -57,7 +64,11 @@ Container {
         Label {
             id: stanza
             multiline: true
-            textStyle.textAlign: TextAlign.Center
+            
+            textStyle {
+                base: fontStyle.style
+                textAlign: TextAlign.Center
+            }
         }
     }
 }

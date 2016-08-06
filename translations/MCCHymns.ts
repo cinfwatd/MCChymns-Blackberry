@@ -58,12 +58,12 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="151"/>
+        <location filename="../assets/Settings.qml" line="158"/>
         <source>Background Texture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="156"/>
+        <location filename="../assets/Settings.qml" line="163"/>
         <source>Use textured background</source>
         <translation type="unfinished"></translation>
     </message>
@@ -114,17 +114,17 @@ as compiled under the direction of</source>
 <context>
     <name>hymnView</name>
     <message>
-        <location filename="../assets/hymnView.qml" line="21"/>
-        <source>Goto Hymn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/hymnView.qml" line="31"/>
+        <location filename="../assets/hymnView.qml" line="32"/>
         <source> Add to Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="88"/>
+        <location filename="../assets/hymnView.qml" line="54"/>
+        <source>Hymn scrollview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/hymnView.qml" line="104"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>

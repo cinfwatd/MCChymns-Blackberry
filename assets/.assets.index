@@ -1,8 +1,10 @@
 1
-26
+28
 data.xml
 About.qml
+Dividr.qml
 Stanza.qml
+FontStyleDefinition.qml
 images/ic_hymns.png
 images/ic_sort.png
 images/ic_action_clear.png

@@ -34,24 +34,24 @@ static const uint qt_meta_data_AppSettings[] = {
       61,   56,   12,   12, 0x05,
       91,   82,   12,   12, 0x05,
      122,  112,   12,   12, 0x05,
-     160,  144,   12,   12, 0x05,
-     209,  188,   12,   12, 0x05,
+     164,  148,   12,   12, 0x05,
+     217,  196,   12,   12, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     243,   13,   12,   12, 0x0a,
-     267,   56,   12,   12, 0x0a,
-     284,   82,   12,   12, 0x0a,
-     301,  112,   12,   12, 0x0a,
-     319,  144,   12,   12, 0x0a,
-     343,  188,   12,   12, 0x0a,
+     251,   13,   12,   12, 0x0a,
+     275,   56,   12,   12, 0x0a,
+     292,   82,   12,   12, 0x0a,
+     309,  112,   12,   12, 0x0a,
+     331,  148,   12,   12, 0x0a,
+     359,  196,   12,   12, 0x0a,
 
  // properties: name, type, flags
-      13,  373, 0x01495903,
-      56,  378, 0x0a495903,
-      82,  386, 0x02495903,
-     112,  386, 0x02495903,
-     144,  386, 0x02495903,
-     188,  373, 0x01495903,
+      13,  389, 0x01495903,
+      56,  394, 0x0a495903,
+      82,  402, 0x02495903,
+     112,  394, 0x0a495903,
+     148,  394, 0x0a495903,
+     196,  389, 0x01495903,
 
  // properties: notify_signal_id
        0,
@@ -69,13 +69,13 @@ static const char qt_meta_stringdata_AppSettings[] = {
     "startFavoritesChanged(bool)\0font\0"
     "fontChanged(QString)\0fontSize\0"
     "fontSizeChanged(int)\0fontColor\0"
-    "fontColorChanged(int)\0backgroundColor\0"
-    "backgroundColorChanged(int)\0"
+    "fontColorChanged(QString)\0backgroundColor\0"
+    "backgroundColorChanged(QString)\0"
     "useBackgroundTexture\0"
     "useBackgroundTextureChanged(bool)\0"
     "setStartFavorites(bool)\0setFont(QString)\0"
-    "setFontSize(int)\0setFontColor(int)\0"
-    "setBackgroundColor(int)\0"
+    "setFontSize(int)\0setFontColor(QString)\0"
+    "setBackgroundColor(QString)\0"
     "setUseBackgroundTexture(bool)\0bool\0"
     "QString\0int\0"
 };
@@ -89,14 +89,14 @@ void AppSettings::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->startFavoritesChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 1: _t->fontChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: _t->fontSizeChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->fontColorChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->backgroundColorChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->fontColorChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 4: _t->backgroundColorChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 5: _t->useBackgroundTextureChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 6: _t->setStartFavorites((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 7: _t->setFont((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 8: _t->setFontSize((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 9: _t->setFontColor((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 10: _t->setBackgroundColor((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->setFontColor((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 10: _t->setBackgroundColor((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 11: _t->setUseBackgroundTexture((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
@@ -146,8 +146,8 @@ int AppSettings::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: *reinterpret_cast< bool*>(_v) = getStartFavorites(); break;
         case 1: *reinterpret_cast< QString*>(_v) = getFont(); break;
         case 2: *reinterpret_cast< int*>(_v) = getFontSize(); break;
-        case 3: *reinterpret_cast< int*>(_v) = getFontColor(); break;
-        case 4: *reinterpret_cast< int*>(_v) = getBackgroundColor(); break;
+        case 3: *reinterpret_cast< QString*>(_v) = getFontColor(); break;
+        case 4: *reinterpret_cast< QString*>(_v) = getBackgroundColor(); break;
         case 5: *reinterpret_cast< bool*>(_v) = getUseBackgroundTexture(); break;
         }
         _id -= 6;
@@ -157,8 +157,8 @@ int AppSettings::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: setStartFavorites(*reinterpret_cast< bool*>(_v)); break;
         case 1: setFont(*reinterpret_cast< QString*>(_v)); break;
         case 2: setFontSize(*reinterpret_cast< int*>(_v)); break;
-        case 3: setFontColor(*reinterpret_cast< int*>(_v)); break;
-        case 4: setBackgroundColor(*reinterpret_cast< int*>(_v)); break;
+        case 3: setFontColor(*reinterpret_cast< QString*>(_v)); break;
+        case 4: setBackgroundColor(*reinterpret_cast< QString*>(_v)); break;
         case 5: setUseBackgroundTexture(*reinterpret_cast< bool*>(_v)); break;
         }
         _id -= 6;
@@ -201,14 +201,14 @@ void AppSettings::fontSizeChanged(int _t1)
 }
 
 // SIGNAL 3
-void AppSettings::fontColorChanged(int _t1)
+void AppSettings::fontColorChanged(QString _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 
 // SIGNAL 4
-void AppSettings::backgroundColorChanged(int _t1)
+void AppSettings::backgroundColorChanged(QString _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 4, _a);

@@ -90,38 +90,45 @@ Page {
                 enabled: true
                 
                 Option {
-                    id: small
-                    text: "Small"
-                    description: "14"
-                    value: description
+                    id: xsmall
+                    text: "Xtra Small"
+//                    description: "10"
+                    value: FontSize.XSmall
                 }
                 
                 Option {
-                    id: nornal
-                    text: "Normal"
-                    description: "18"
-                    value: description
+                    id: small
+                    text: "Small"
+//                    description: "14"
+                    value: FontSize.Small
                 }
                 
                 Option {
                     id: medium
                     text: "Medium"
-                    description: "22"
-                    value: description
+//                    description: "18"
+                    value: FontSize.Medium
                 }
                 
                 Option {
                     id: large
-                    text: "Large"
-                    description: "26"
-                    value: description
+                    text: "large"
+//                    description: "22"
+                    value: FontSize.Large
+                }
+                
+                Option {
+                    id: xlarge
+                    text: "Xtra Large"
+//                    description: "26"
+                    value: FontSize.XLarge
                 }
                 
                 Option {
                     id: huge
                     text: "Huge"
-                    description: "30"
-                    value: description
+//                    description: "30"
+                    value: FontSize.XXLarge
                 }
                 
                 onCreationCompleted: {
