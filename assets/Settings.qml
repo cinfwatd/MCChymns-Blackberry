@@ -1,4 +1,5 @@
 import bb.cascades 1.4
+import bb.system 1.2
 
 Page {
     function setDropDownOptionByValue(dropdown, value) {
@@ -17,6 +18,13 @@ Page {
         kind: TitleBarKind.Default
         appearance: TitleBarAppearance.Branded
     }
+    
+    attachedObjects: [
+        SystemToast {
+            id: alert
+            body: "Font and background color should not be the same"
+        }
+    ]
     
     ScrollView {
         accessibility.name: qsTr("Settings scrollView")
@@ -192,6 +200,10 @@ Page {
                         
                         var result = getColorFromXML(indexPath)
                         myValue = result.name
+                        
+                        if (result.color === appSettings.backgroundColor) {
+                            alert.show()
+                        }
                         appSettings.fontColor = result.color
                     }
                 }
@@ -247,6 +259,10 @@ Page {
                         
                         var result = getColorFromXML(indexPath)
                         myValue = result.name
+                        
+                        if (result.color === appSettings.fontColor) {
+                            alert.show()
+                        }
                         appSettings.backgroundColor = result.color
                     }
                 }
