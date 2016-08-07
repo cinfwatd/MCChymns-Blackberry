@@ -119,17 +119,27 @@ as compiled under the direction of</source>
 <context>
     <name>hymnView</name>
     <message>
-        <location filename="../assets/hymnView.qml" line="37"/>
+        <location filename="../assets/hymnView.qml" line="26"/>
+        <source>Double tap to hide or show chorus pane.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/hymnView.qml" line="28"/>
+        <source>Got It</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/hymnView.qml" line="52"/>
         <source> Add to Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="61"/>
+        <location filename="../assets/hymnView.qml" line="76"/>
         <source>Hymn scrollview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="111"/>
+        <location filename="../assets/hymnView.qml" line="126"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>

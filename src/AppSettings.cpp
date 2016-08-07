@@ -12,6 +12,7 @@
 
 //Setting default values.
 const bool AppSettings::mDefaultStartFavorites(false);
+const bool AppSettings::mDefaultHideChorusInfo(false);
 const QString AppSettings::mDefaultFont("Lilac_malaria");
 const int AppSettings::mDefaultFontSize(18);
 const QString AppSettings::mDefaultFontColor("#62371A");
@@ -20,6 +21,7 @@ const bool AppSettings::mDefaultUseBackgroundTexture(true);
 
 //Settings keys.
 const QString AppSettings::MCCHYMNS_START_FAVORITES_KEY("start_favorites");
+const QString AppSettings::MCCHYMNS_HIDE_CHORUS_INFO_KEY("hide_chorus_info");
 const QString AppSettings::MCCHYMNS_FONT_KEY("font");
 const QString AppSettings::MCCHYMNS_FONT_SIZE_KEY("font_size");
 const QString AppSettings::MCCHYMNS_FONT_COLOR_KEY("font_color");
@@ -34,6 +36,7 @@ AppSettings::AppSettings(QObject* parent) : QObject(parent)
 
 //    Load the values from QSettings or set as the default values if not yet set.
     mStartFavorites = QSettings().value(MCCHYMNS_START_FAVORITES_KEY, mDefaultStartFavorites).toBool();
+    mHideChorusInfo = QSettings().value(MCCHYMNS_HIDE_CHORUS_INFO_KEY, mDefaultHideChorusInfo).toBool();
     mFont = QSettings().value(MCCHYMNS_FONT_KEY, mDefaultFont).toString();
     mFontSize = QSettings().value(MCCHYMNS_FONT_SIZE_KEY, mDefaultFontSize).toInt();
     mFontColor = QSettings().value(MCCHYMNS_FONT_COLOR_KEY, mDefaultFontColor).toString();
@@ -48,6 +51,11 @@ AppSettings::~AppSettings() {
 bool AppSettings::getStartFavorites() const
 {
     return mStartFavorites;
+}
+
+bool AppSettings::getHideChorusInfo() const
+{
+    return mHideChorusInfo;
 }
 
 QString AppSettings::getFont() const
@@ -81,6 +89,15 @@ void AppSettings::setStartFavorites(bool startFavorites)
         QSettings().setValue(MCCHYMNS_START_FAVORITES_KEY, startFavorites);
         mStartFavorites = startFavorites;
         emit startFavoritesChanged(startFavorites);
+    }
+}
+
+void AppSettings::setHideChorusInfo(bool hideChorusInfo)
+{
+    if (mHideChorusInfo != hideChorusInfo) {
+        QSettings().setValue(MCCHYMNS_HIDE_CHORUS_INFO_KEY, hideChorusInfo);
+        mHideChorusInfo = hideChorusInfo;
+        emit hideChorusInfoChanged(hideChorusInfo);
     }
 }
 

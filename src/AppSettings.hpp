@@ -20,6 +20,7 @@ class AppSettings : public QObject
     Q_OBJECT
 
     Q_PROPERTY( bool startFavorites READ getStartFavorites WRITE setStartFavorites NOTIFY startFavoritesChanged FINAL )
+    Q_PROPERTY( bool hideChorusInfo READ getHideChorusInfo WRITE setHideChorusInfo NOTIFY hideChorusInfoChanged FINAL)
     Q_PROPERTY( QString font READ getFont WRITE setFont NOTIFY fontChanged FINAL )
     Q_PROPERTY( int fontSize READ getFontSize WRITE setFontSize NOTIFY fontSizeChanged FINAL)
     Q_PROPERTY( QString fontColor READ getFontColor WRITE setFontColor NOTIFY fontColorChanged FINAL)
@@ -31,6 +32,7 @@ public:
     virtual ~AppSettings();
 
     bool getStartFavorites() const;
+    bool getHideChorusInfo() const;
     QString getFont() const;
     int getFontSize() const;
     QString getFontColor() const;
@@ -39,6 +41,7 @@ public:
 
 public slots:
     void setStartFavorites(bool startFavorites);
+    void setHideChorusInfo(bool hideChorusInfo);
     void setFont(QString font);
     void setFontSize(int fontSize);
     void setFontColor(QString fontColor);
@@ -47,6 +50,7 @@ public slots:
 
 signals:
     void startFavoritesChanged(bool startFavorites);
+    void hideChorusInfoChanged(bool hideChorusInfo);
     void fontChanged(QString font);
     void fontSizeChanged(int fontSize);
     void fontColorChanged(QString fontColor);
@@ -56,6 +60,7 @@ signals:
 private:
 //    Default values for properties.
     static const bool mDefaultStartFavorites;
+    static const bool mDefaultHideChorusInfo;
     static const QString mDefaultFont;
     static const int mDefaultFontSize;
     static const QString mDefaultFontColor;
@@ -64,6 +69,7 @@ private:
 
 //    Keys where the values are stored in the QSettings Object.
     static const QString MCCHYMNS_START_FAVORITES_KEY;
+    static const QString MCCHYMNS_HIDE_CHORUS_INFO_KEY;
     static const QString MCCHYMNS_FONT_KEY;
     static const QString MCCHYMNS_FONT_SIZE_KEY;
     static const QString MCCHYMNS_FONT_COLOR_KEY;
@@ -72,6 +78,7 @@ private:
 
 //    The property variables.
     bool mStartFavorites;
+    bool mHideChorusInfo;
     QString mFont;
     int mFontSize;
     QString mFontColor;

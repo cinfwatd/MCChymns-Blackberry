@@ -1,4 +1,5 @@
 import bb.cascades 1.4
+import bb.system 1.2
 
 Page {
     id: page
@@ -19,6 +20,20 @@ Page {
             id: backgroundImage
             repeatPattern: RepeatPattern.XY
             imageSource: "asset:///images/paper_texture.amd"
+        },
+        SystemToast {
+            id: alert
+            body: qsTr("Double tap to hide or show chorus pane.") + Retranslate.onLocaleOrLanguageChanged
+            button.enabled: true
+            button.label: qsTr("Got It") + Retranslate.onLocaleOrLanguageChanged
+            
+            onFinished: {
+                var isClicked = buttonSelection()
+                
+                if (isClicked) {
+                    appSettings.hideChorusInfo = true
+                } 
+            }
         }
     ]
     
@@ -135,5 +150,8 @@ Page {
     
     onCreationCompleted: {
 //        settingsFontSize = appSettings.fontSize
+        if (!appSettings.hideChorusInfo) {
+            alert.show()
+        }
     }
 }
