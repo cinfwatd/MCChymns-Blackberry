@@ -63,6 +63,8 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/images/ic_show_dialpad.png) \
         $$quote($$BASEDIR/assets/images/ic_sort.png) \
         $$quote($$BASEDIR/assets/images/icon.png) \
+        $$quote($$BASEDIR/assets/images/paper_texture.amd) \
+        $$quote($$BASEDIR/assets/images/paper_texture.png) \
         $$quote($$BASEDIR/assets/main.qml) \
         $$quote($$BASEDIR/assets/sql/MCCHymns.db)
 }

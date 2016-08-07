@@ -1,5 +1,5 @@
 1
-29
+31
 data.xml
 About.qml
 Dividr.qml
@@ -12,6 +12,7 @@ images/ic_info.png
 images/icon.png
 images/ic_search.png
 images/ic_action_favorite_off.png
+images/paper_texture.png
 images/ic_delete.png
 images/ic_show_dialpad.png
 images/ic_feedback.png
@@ -19,6 +20,7 @@ images/ic_hymn_gray.png
 images/ic_settings.png
 images/ic_action_favorite_on.png
 images/ic_delete_prior.png
+images/paper_texture.amd
 main.qml
 Settings.qml
 GotoHymnDialog.qml

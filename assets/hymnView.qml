@@ -4,7 +4,6 @@ Page {
     id: page
     property int hymnNumber
     
-    
     titleBar: TitleBar {
         title: qsTr("HymnView" + hymnNumber) + Retranslate.onLocaleOrLanguageChanged
         kind: TitleBarKind.Default
@@ -14,6 +13,12 @@ Page {
     attachedObjects: [
         FontStyleDefinition {
             id: fontStyle
+        },
+        
+        ImagePaintDefinition {
+            id: backgroundImage
+            repeatPattern: RepeatPattern.XY
+            imageSource: "asset:///images/paper_texture.amd"
         }
     ]
     
@@ -42,6 +47,8 @@ Page {
         rightPadding: ui.du(3)
         bottomPadding: ui.du(3)
         leftPadding: ui.du(3)
+        
+        background: appSettings.useBackgroundTexture ? backgroundImage.imagePaint : Color.create(appSettings.backgroundColor)
         
         gestureHandlers: [
             DoubleTapHandler {
@@ -93,7 +100,7 @@ Page {
             horizontalAlignment: HorizontalAlignment.Center
             preferredWidth: maxWidth
             
-            background: Color.White
+            background: hymnContainer.background
             
             Dividr {
                 bottomMargin: 0
