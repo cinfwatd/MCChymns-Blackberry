@@ -1,5 +1,5 @@
 1
-28
+29
 data.xml
 About.qml
 Dividr.qml
@@ -25,6 +25,7 @@ GotoHymnDialog.qml
 sql/MCCHymns.db
 CustomButton.qml
 SortByDialog.qml
+colors.xml
 hymnsList.qml
 favoritesList.qml
 hymnView.qml

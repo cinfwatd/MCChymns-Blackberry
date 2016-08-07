@@ -43,27 +43,32 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="39"/>
+        <location filename="../assets/Settings.qml" line="22"/>
+        <source>Settings scrollView</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/Settings.qml" line="41"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="44"/>
+        <location filename="../assets/Settings.qml" line="46"/>
         <source>Show favorites on start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="62"/>
+        <location filename="../assets/Settings.qml" line="64"/>
         <source>Hymn settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="158"/>
+        <location filename="../assets/Settings.qml" line="279"/>
         <source>Background Texture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="163"/>
+        <location filename="../assets/Settings.qml" line="284"/>
         <source>Use textured background</source>
         <translation type="unfinished"></translation>
     </message>

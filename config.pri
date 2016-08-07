@@ -44,6 +44,7 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/Settings.qml) \
         $$quote($$BASEDIR/assets/SortByDialog.qml) \
         $$quote($$BASEDIR/assets/Stanza.qml) \
+        $$quote($$BASEDIR/assets/colors.xml) \
         $$quote($$BASEDIR/assets/data.xml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
         $$quote($$BASEDIR/assets/hymnView.qml) \

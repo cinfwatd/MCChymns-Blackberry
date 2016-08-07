@@ -1,0 +1,37 @@
+<model>
+	<column colspan="2">
+		<colorItem name="Azure" color="#F0FFFF" />
+		<colorItem name="Brown" color="#62371A" />
+		<colorItem name="Burly Wood" color="#DEB887" />
+		<colorItem name="Black" color="#000000" />
+		<colorItem name="Bisque" color="#FFE4C4" />
+		<colorItem name="Beige" color="#F5F5DC" />
+		<colorItem name="Blue Violet" color="#8A2BE2" />
+		<colorItem name="Cadet Blue" color="#5F9EA0" />
+		<colorItem name="Chocolate" color="#D2691E" />
+		<colorItem name="Cornflower Blue" color="#6495ED" />
+		<colorItem name="Cornsilk" color="#FFF8DC" />
+		<colorItem name="Crimson" color="#DC143C" />
+		<colorItem name="Dark Cyan" color="#008B8B" />
+		<colorItem name="Dark GoldenRod" color="#B8860B" />
+		<colorItem name="Dark Grey" color="#A9A9A9" />
+		<colorItem name="Dark Khaki" color="#BDB76B" />
+		<colorItem name="Dark Olive Green" color="#556B2F" />
+		<colorItem name="Gold" color="#FFD700" />
+		<colorItem name="Golden Rod" color="#DAA520" />
+		<colorItem name="Grey" color="#808080" />
+		<colorItem name="Maroon" color="#800000" />
+		<colorItem name="Medium Purple" color="#9370DB" />
+		<colorItem name="Olive" color="#808000" />
+		<colorItem name="Olive Drab" color="#6B8E23" />
+		<colorItem name="Plum" color="#DDA0DD" />
+		<colorItem name="Powder Blue" color="#B0E0E6" />
+		<colorItem name="Rosy Brown" color="#BC8F8F" />
+		<colorItem name="Saddle Brown" color="#8B4513" />
+		<colorItem name="SandyBrown" color="#F4A460" />
+		<colorItem name="Tan" color="#D2B48C" />
+		<colorItem name="Tomato" color="#FF6347" />
+		<colorItem name="Wheat" color="#F5DEB3" />
+		<colorItem name="White" color="#FFFFFF" />
+	</column>
+</model>
