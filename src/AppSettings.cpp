@@ -12,7 +12,7 @@
 
 //Setting default values.
 const bool AppSettings::mDefaultStartFavorites(false);
-const QString AppSettings::mDefaultFont("lilac_malaria.ttf");
+const QString AppSettings::mDefaultFont("Lilac_malaria");
 const int AppSettings::mDefaultFontSize(18);
 const QString AppSettings::mDefaultFontColor("#62371A");
 const QString AppSettings::mDefaultBackgroundColor("fff0d8a9");

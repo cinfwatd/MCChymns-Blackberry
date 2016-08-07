@@ -80,9 +80,92 @@ Page {
                 leftPadding: ui.du(2)
                 rightPadding: leftPadding
                 
-                DropDown {
-                    id: fontsDropdown
+//                DropDown {
+//                    id: fontsDropdown
+//                    title: "Fonts"
+//                    enabled: true
+//                    
+//                    Option {
+//                        id: lilac
+//                        text: "sdfsdf"
+//                        
+//                    }
+//                }
+
+                Picker {
+                    id: fontsPicker
+                    property string myValue: ""
                     title: "Fonts"
+                    description: myValue
+                    
+                    rootIndexPath: []
+                    dataModel: XmlDataModel {
+                        id: fontsDataModel
+                        source: "asset:///xml/fonts.xml"
+                    }
+                    
+                    pickerItemComponents: [
+                        PickerItemComponent {
+                            type: "fontItem"
+                            content: Label {
+                                text: pickerItemData.name
+                                textStyle{
+                                    base: sfontStyle.style
+                                    fontFamily: pickerItemData.name
+                                }
+                                attachedObjects: [
+                                    FontStyleDefinition {
+                                        id: sfontStyle
+                                        color: Color.Black
+                                        fontSize: FontSize.Default
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                    
+                    onCreationCompleted: {
+                        var index = 0
+                        switch (appSettings.font) {
+                            case "Lilac-alaria":
+                                index = 0
+                                break
+                            case "Calligraffiti":
+                                index = 1
+                                break
+                            case "Andada":
+                                index = 2
+                                break
+                            case "Underwood":
+                                index = 3
+                                break
+                                
+                        }  
+                        fontsPicker.select(0, index)
+                    }
+                    
+                    onSelectedValueChanged: {
+                        var indexPath = fontsPicker.selectedIndex(0)
+                        
+                        var fontName = ""
+                        switch (indexPath) {
+                            case 0:
+                                fontName = "Lilac-malaria"
+                                break
+                            case 1:
+                                fontName = "Calligraffiti"
+                                break
+                            case 2:
+                                fontName = "Andada"
+                                break
+                            case 3:
+                                fontName = "Underwood"
+                                break
+                        }
+                        
+                        myValue = fontName
+                        appSettings.font = fontName
+                    }
                 }
             
             }
@@ -166,7 +249,7 @@ Page {
                     
                     rootIndexPath: []
                     dataModel: XmlDataModel {
-                        source: "asset:///colors.xml"
+                        source: "asset:///xml/colors.xml"
                     }
                     
                     pickerItemComponents: [
@@ -225,7 +308,7 @@ Page {
                     
                     rootIndexPath: []
                     dataModel: XmlDataModel {
-                        source: "asset:///colors.xml"
+                        source: "asset:///xml/colors.xml"
                     }
                     
                     pickerItemComponents: [

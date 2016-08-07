@@ -44,9 +44,16 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/Settings.qml) \
         $$quote($$BASEDIR/assets/SortByDialog.qml) \
         $$quote($$BASEDIR/assets/Stanza.qml) \
-        $$quote($$BASEDIR/assets/colors.xml) \
         $$quote($$BASEDIR/assets/data.xml) \
         $$quote($$BASEDIR/assets/favoritesList.qml) \
+        $$quote($$BASEDIR/assets/fonts/andada/Andada-Regular.otf) \
+        $$quote($$BASEDIR/assets/fonts/andada/SIL Open Font License.txt) \
+        $$quote($$BASEDIR/assets/fonts/calligraffiti/Apache License.txt) \
+        $$quote($$BASEDIR/assets/fonts/calligraffiti/Calligraffiti.ttf) \
+        $$quote($$BASEDIR/assets/fonts/lilac_malaria/Vic Fieger License.txt) \
+        $$quote($$BASEDIR/assets/fonts/lilac_malaria/lilac_malaria.ttf) \
+        $$quote($$BASEDIR/assets/fonts/my_underwood/MyUnderwood.ttf) \
+        $$quote($$BASEDIR/assets/fonts/my_underwood/Tension Type Font License.txt) \
         $$quote($$BASEDIR/assets/hymnView.qml) \
         $$quote($$BASEDIR/assets/hymnsList.qml) \
         $$quote($$BASEDIR/assets/images/ic_action_clear.png) \
@@ -66,7 +73,9 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/images/paper_texture.amd) \
         $$quote($$BASEDIR/assets/images/paper_texture.png) \
         $$quote($$BASEDIR/assets/main.qml) \
-        $$quote($$BASEDIR/assets/sql/MCCHymns.db)
+        $$quote($$BASEDIR/assets/sql/MCCHymns.db) \
+        $$quote($$BASEDIR/assets/xml/colors.xml) \
+        $$quote($$BASEDIR/assets/xml/fonts.xml)
 }
 
 config_pri_source_group1 {
@@ -96,12 +105,30 @@ lupdate_inclusion {
         $$quote($$BASEDIR/../assets/*.qml) \
         $$quote($$BASEDIR/../assets/*.js) \
         $$quote($$BASEDIR/../assets/*.qs) \
+        $$quote($$BASEDIR/../assets/fonts/*.qml) \
+        $$quote($$BASEDIR/../assets/fonts/*.js) \
+        $$quote($$BASEDIR/../assets/fonts/*.qs) \
+        $$quote($$BASEDIR/../assets/fonts/andada/*.qml) \
+        $$quote($$BASEDIR/../assets/fonts/andada/*.js) \
+        $$quote($$BASEDIR/../assets/fonts/andada/*.qs) \
+        $$quote($$BASEDIR/../assets/fonts/calligraffiti/*.qml) \
+        $$quote($$BASEDIR/../assets/fonts/calligraffiti/*.js) \
+        $$quote($$BASEDIR/../assets/fonts/calligraffiti/*.qs) \
+        $$quote($$BASEDIR/../assets/fonts/lilac_malaria/*.qml) \
+        $$quote($$BASEDIR/../assets/fonts/lilac_malaria/*.js) \
+        $$quote($$BASEDIR/../assets/fonts/lilac_malaria/*.qs) \
+        $$quote($$BASEDIR/../assets/fonts/my_underwood/*.qml) \
+        $$quote($$BASEDIR/../assets/fonts/my_underwood/*.js) \
+        $$quote($$BASEDIR/../assets/fonts/my_underwood/*.qs) \
         $$quote($$BASEDIR/../assets/images/*.qml) \
         $$quote($$BASEDIR/../assets/images/*.js) \
         $$quote($$BASEDIR/../assets/images/*.qs) \
         $$quote($$BASEDIR/../assets/sql/*.qml) \
         $$quote($$BASEDIR/../assets/sql/*.js) \
-        $$quote($$BASEDIR/../assets/sql/*.qs)
+        $$quote($$BASEDIR/../assets/sql/*.qs) \
+        $$quote($$BASEDIR/../assets/xml/*.qml) \
+        $$quote($$BASEDIR/../assets/xml/*.js) \
+        $$quote($$BASEDIR/../assets/xml/*.qs)
 
     HEADERS += \
         $$quote($$BASEDIR/../src/*.h) \

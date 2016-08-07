@@ -1,5 +1,5 @@
 1
-31
+40
 data.xml
 About.qml
 Dividr.qml
@@ -27,7 +27,16 @@ GotoHymnDialog.qml
 sql/MCCHymns.db
 CustomButton.qml
 SortByDialog.qml
-colors.xml
+xml/fonts.xml
+xml/colors.xml
 hymnsList.qml
+fonts/my_underwood/MyUnderwood.ttf
+fonts/my_underwood/Tension Type Font License.txt
+fonts/andada/SIL Open Font License.txt
+fonts/andada/Andada-Regular.otf
+fonts/lilac_malaria/lilac_malaria.ttf
+fonts/lilac_malaria/Vic Fieger License.txt
+fonts/calligraffiti/Calligraffiti.ttf
+fonts/calligraffiti/Apache License.txt
 favoritesList.qml
 hymnView.qml

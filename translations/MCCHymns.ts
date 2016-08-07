@@ -38,37 +38,37 @@ as compiled under the direction of</source>
 <context>
     <name>Settings</name>
     <message>
-        <location filename="../assets/Settings.qml" line="16"/>
+        <location filename="../assets/Settings.qml" line="17"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="22"/>
+        <location filename="../assets/Settings.qml" line="30"/>
         <source>Settings scrollView</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="41"/>
+        <location filename="../assets/Settings.qml" line="49"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="46"/>
+        <location filename="../assets/Settings.qml" line="54"/>
         <source>Show favorites on start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="64"/>
+        <location filename="../assets/Settings.qml" line="72"/>
         <source>Hymn settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="269"/>
+        <location filename="../assets/Settings.qml" line="368"/>
         <source>Background Texture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/Settings.qml" line="274"/>
+        <location filename="../assets/Settings.qml" line="373"/>
         <source>Use textured background</source>
         <translation type="unfinished"></translation>
     </message>
@@ -124,12 +124,12 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="62"/>
+        <location filename="../assets/hymnView.qml" line="61"/>
         <source>Hymn scrollview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="112"/>
+        <location filename="../assets/hymnView.qml" line="111"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>
