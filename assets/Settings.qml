@@ -111,13 +111,13 @@ Page {
                                 text: pickerItemData.name
                                 textStyle{
                                     base: sfontStyle.style
-                                    fontFamily: pickerItemData.name
                                 }
                                 attachedObjects: [
                                     FontStyleDefinition {
                                         id: sfontStyle
                                         color: Color.Black
                                         fontSize: FontSize.Default
+                                        fontFamily: pickerItemData.name
                                     }
                                 ]
                             }
