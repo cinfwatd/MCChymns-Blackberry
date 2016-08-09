@@ -129,17 +129,17 @@ as compiled under the direction of</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="89"/>
+        <location filename="../assets/hymnView.qml" line="99"/>
         <source> Add to Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="113"/>
+        <location filename="../assets/hymnView.qml" line="123"/>
         <source>Hymn scrollview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="150"/>
+        <location filename="../assets/hymnView.qml" line="160"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>

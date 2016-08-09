@@ -50,14 +50,24 @@ Page {
             onDataLoaded: {
                 if (data.length > 0) {
                     
+                    var chorusExist = false
+                    
                     for (var i = 0; i < data.length; i++) {
 
                         var stanzaNumber = data[i].stanza_number
                         var stanzaLines = data[i].stanza_
                         
                         if (!stanzaNumber) {
-                            chorus.text = stanzaLines.replace(/\\n/g, "\n")
-                            chorusPresent = true
+                            
+                            if (chorusExist) {
+                                chorus.text = chorus.text + "\n..................\n" + stanzaLines.replace(/\\n/g, "\n")
+                            } else {
+                                chorus.text = stanzaLines.replace(/\\n/g, "\n")
+                                chorusPresent = true
+                                
+                                chorusExist = true
+                            }
+                            
                         } 
                         else {
                             //prepare title
