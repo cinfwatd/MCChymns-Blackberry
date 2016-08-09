@@ -5,12 +5,12 @@ import com.bitrient.data 1.0
 Page {
     id: page
     property int hymnNumber
+    property string hymnTitle
+    
     property bool chorusPresent: false
     
-    property int selectedHymn: parent.selectedHymnNumber
-    
     titleBar: TitleBar {
-        title: qsTr("HymnView" + hymnNumber) + Retranslate.onLocaleOrLanguageChanged
+        title: hymnTitle
         kind: TitleBarKind.Default
         appearance: TitleBarAppearance.Branded
     }
@@ -46,27 +46,34 @@ Page {
         CustomSqlDataSource {
             id: asyncDataSource
             source: "sql/MCCHymns.db"
-            query: "SELECT hymn_number, stanza_number, stanza_, favourite FROM hymns_view WHERE hymn_number = 577 ORDER BY stanza_number ASC"
-            property int localHymnNumber
             
             onDataLoaded: {
                 if (data.length > 0) {
                     
                     for (var i = 0; i < data.length; i++) {
-                        console.log(data[i].stanza_number + ": " +data[i].stanza_)
+
+                        var stanzaNumber = data[i].stanza_number
+                        var stanzaLines = data[i].stanza_
                         
-                        if (!data[i].stanza_number) {
-                            chorus.text = data[i].stanza_.replace(/\\n/g, "\n")
+                        if (!stanzaNumber) {
+                            chorus.text = stanzaLines.replace(/\\n/g, "\n")
                             chorusPresent = true
-                            
-                            
-                            console.log("asdf" + hymnNumber)
-                            
                         } 
                         else {
+                            //prepare title
+                            if (stanzaNumber == 1) {
+                                var idx = stanzaLines.indexOf("\\n")
+                                
+                                if (idx == -1) {
+                                    hymnTitle = hymnNumber + " - " + stanzaLines
+                                } else {
+                                    hymnTitle = hymnNumber + " - " + stanzaLines.substring(0, idx)
+                                }
+                            }
+                            
                             var stanza = stanzaTpl.createObject()
-                            stanza.stanzaNumber = data[i].stanza_number
-                            stanza.stanza = data[i].stanza_.replace(/\\n/g, "\n")
+                            stanza.stanzaNumber = stanzaNumber
+                            stanza.stanza = stanzaLines.replace(/\\n/g, "\n")
                             
                             stanzasContainer.add(stanza)
                         }
@@ -77,15 +84,6 @@ Page {
     ]
     
     actions: [
-//        ActionItem {
-//            title: qsTr("Open Hymn") + Retranslate.onLocaleOrLanguageChanged
-//            ActionBar.placement: ActionBarPlacement.InOverflow
-//            imageSource: "asset:///images/ic_show_dialpad.png"
-//            
-//            onTriggered: {
-//                gotoHymnDialog.open()
-//            }
-//        },
         
         ActionItem {
             title: qsTr(" Add to Favorites") + Retranslate.onLocaleOrLanguageChanged
@@ -175,14 +173,15 @@ Page {
     }
     
     onCreationCompleted: {
-//        settingsFontSize = appSettings.fontSize
         if (!appSettings.hideChorusInfo) {
             alert.show()
         }
-        
-        console.log("Hymn NUmber passed: " + selectedHymn)
-        
-//        asyncDataSource.localHymnNumber = hymnNumber
+
+    }
+    
+    onHymnNumberChanged: {
+        asyncDataSource.query = "SELECT hymn_number, stanza_number, stanza_, favourite FROM hymns_view WHERE hymn_number =" + hymnNumber + " ORDER BY stanza_number ASC"
         asyncDataSource.load()
+        
     }
 }
