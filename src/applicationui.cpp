@@ -15,6 +15,7 @@
  */
 
 #include "applicationui.hpp"
+#include "CustomSqlDataSource.hpp"
 
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
@@ -41,6 +42,8 @@ ApplicationUI::ApplicationUI() :
 
     // initial load
     onSystemLanguageChanged();
+
+    qmlRegisterType<CustomSqlDataSource>("com.bitrient.data", 1, 0, "CustomSqlDataSource");
 
     // Create scene document from main.qml asset, the parent is set
     // to ensure the document gets destroyed properly at shut down.

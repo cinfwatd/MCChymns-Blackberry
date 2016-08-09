@@ -119,27 +119,27 @@ as compiled under the direction of</source>
 <context>
     <name>hymnView</name>
     <message>
-        <location filename="../assets/hymnView.qml" line="26"/>
+        <location filename="../assets/hymnView.qml" line="30"/>
         <source>Double tap to hide or show chorus pane.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="28"/>
+        <location filename="../assets/hymnView.qml" line="32"/>
         <source>Got It</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="52"/>
+        <location filename="../assets/hymnView.qml" line="91"/>
         <source> Add to Favorites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="76"/>
+        <location filename="../assets/hymnView.qml" line="115"/>
         <source>Hymn scrollview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnView.qml" line="126"/>
+        <location filename="../assets/hymnView.qml" line="152"/>
         <source>Chorus</source>
         <translation type="unfinished"></translation>
     </message>
@@ -147,32 +147,32 @@ as compiled under the direction of</source>
 <context>
     <name>hymnsList</name>
     <message>
-        <location filename="../assets/hymnsList.qml" line="28"/>
+        <location filename="../assets/hymnsList.qml" line="30"/>
         <source>List of all the hymns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="112"/>
+        <location filename="../assets/hymnsList.qml" line="116"/>
         <source>Loading hymns ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="122"/>
+        <location filename="../assets/hymnsList.qml" line="126"/>
         <source>Open hymn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="132"/>
+        <location filename="../assets/hymnsList.qml" line="136"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="141"/>
+        <location filename="../assets/hymnsList.qml" line="145"/>
         <source>Sort By</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/hymnsList.qml" line="203"/>
+        <location filename="../assets/hymnsList.qml" line="207"/>
         <source>MCCHymns</source>
         <translation type="unfinished"></translation>
     </message>

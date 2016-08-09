@@ -4,6 +4,8 @@ import bb.cascades.datamanager 1.2
 NavigationPane {
     id: navigationPane
     property bool searchBarOn: false
+    property int selectedHymnNumber: 90
+    
     function toggleSearchBar() {
         if (searchBarOn) {
             hymnsPage.titleBar = defaultBar
@@ -91,6 +93,8 @@ NavigationPane {
                         var chosenItem = dataModel.data(indexPath)
                         var contentPage = hymnViewDefinition.createObject()
                         
+//                        Qt. = chosenItem.hymn_number
+                        selectedHymnNumber = chosenItem.hymn_number
                         contentPage.hymnNumber = chosenItem.hymn_number
                         navigationPane.push(contentPage)
                     }
@@ -206,7 +210,7 @@ NavigationPane {
         }
     ]
     onPopTransitionEnded: {
-        page.destroy()
+        contentPage.destroy()
     }
     
     onCreationCompleted: {

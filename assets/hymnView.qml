@@ -1,9 +1,13 @@
 import bb.cascades 1.4
 import bb.system 1.2
+import com.bitrient.data 1.0
 
 Page {
     id: page
     property int hymnNumber
+    property bool chorusPresent: false
+    
+    property int selectedHymn: parent.selectedHymnNumber
     
     titleBar: TitleBar {
         title: qsTr("HymnView" + hymnNumber) + Retranslate.onLocaleOrLanguageChanged
@@ -33,6 +37,41 @@ Page {
                 if (isClicked) {
                     appSettings.hideChorusInfo = true
                 } 
+            }
+        },
+        ComponentDefinition {
+            id: stanzaTpl
+            source: "asset:///Stanza.qml"
+        },
+        CustomSqlDataSource {
+            id: asyncDataSource
+            source: "sql/MCCHymns.db"
+            query: "SELECT hymn_number, stanza_number, stanza_, favourite FROM hymns_view WHERE hymn_number = 577 ORDER BY stanza_number ASC"
+            property int localHymnNumber
+            
+            onDataLoaded: {
+                if (data.length > 0) {
+                    
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(data[i].stanza_number + ": " +data[i].stanza_)
+                        
+                        if (!data[i].stanza_number) {
+                            chorus.text = data[i].stanza_.replace(/\\n/g, "\n")
+                            chorusPresent = true
+                            
+                            
+                            console.log("asdf" + hymnNumber)
+                            
+                        } 
+                        else {
+                            var stanza = stanzaTpl.createObject()
+                            stanza.stanzaNumber = data[i].stanza_number
+                            stanza.stanza = data[i].stanza_.replace(/\\n/g, "\n")
+                            
+                            stanzasContainer.add(stanza)
+                        }
+                    }
+                }
             }
         }
     ]
@@ -68,7 +107,7 @@ Page {
         gestureHandlers: [
             DoubleTapHandler {
                 onDoubleTapped: {
-                    chorusContainer.setVisible(!chorusContainer.visible)
+                    chorusContainer.setVisible(!chorusContainer.visible && chorusPresent)
                 }
             }
         ]
@@ -83,25 +122,10 @@ Page {
                 }
                 verticalAlignment: VerticalAlignment.Top
                 
-                Stanza {
-                    stanzaNumber: "1"
-                    stanza: "Jesus is good. sdjfldsfjsdf\nsdfsdafasfdasf sdfsd afsdf sdfsd\n fsldfdslfaffdaf sdfdsfdsffdaf\nsdfdsfsdfdfsdfdsfsdf"
-                }
-                
-                Stanza {
-                    stanzaNumber: "2"
-                    stanza: "I love the Lord. He rescues me.\n sadfadsldf  asfsf asfdsf  lgewi dsf\n sdfdslfsaf asfl afsf s"
-                }
-                
-                Stanza {
-                    stanzaNumber: "3"
-                    stanza: "I love the Lord. He rescues me.\n sdlfoowirwe wrewpqwrwenn n,cxvx sd,x, csdf\n lsjflwero weriewore  welweds sdweriew lsdfdslf .sdfds ffdsdsfsdfds."
-                }
-                
-                Stanza {
-                    stanzaNumber: "4"
-                    stanza: "I love the Lord. He rescues me.\nsldkf dsaf alfkds f lkjklsdf dsl..z,dxc\n lskfdslfdslkdsaf  sdlfkwe owerw ,xcxvxvxds dsfdf\n sdljldsweorew werewr,sd dsf sdf dsf.dsfdsf"
-                }
+//                Stanza {
+//                    stanzaNumber: "1"
+//                    stanza: "Jesus is good. sdjfldsfjsdf\nsdfsdafasfdasf sdfsd afsdf sdfsd\n fsldfdslfaffdaf sdfdsfdsffdaf\nsdfdsfsdfdfsdfdsfsdf"
+//                }
             }
         }
         
@@ -110,6 +134,7 @@ Page {
             layout: StackLayout {
                 orientation: LayoutOrientation.TopToBottom
             }
+            visible: chorusPresent
             
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
@@ -123,6 +148,7 @@ Page {
 
             Label {
                 id: chorusTitle
+                textFormat: TextFormat.Auto
                 text: qsTr("Chorus") + Retranslate.onLocaleOrLanguageChanged
                 textStyle.base: fontStyle.style
                 horizontalAlignment: HorizontalAlignment.Center
@@ -153,5 +179,10 @@ Page {
         if (!appSettings.hideChorusInfo) {
             alert.show()
         }
+        
+        console.log("Hymn NUmber passed: " + selectedHymn)
+        
+//        asyncDataSource.localHymnNumber = hymnNumber
+        asyncDataSource.load()
     }
 }
